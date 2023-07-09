@@ -1,0 +1,1981 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.5">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="SLM-REST" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="SLM-REST" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${U__threads}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${U__rampUp}</stringProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.duration">${duration}</stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Global Configuration" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="duration" elementType="Argument">
+              <stringProp name="Argument.name">duration</stringProp>
+              <stringProp name="Argument.value">${__P(duration,30)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="U__rampUp" elementType="Argument">
+              <stringProp name="Argument.name">U__rampUp</stringProp>
+              <stringProp name="Argument.value">${__P(rampupduration,1)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="U__threads" elementType="Argument">
+              <stringProp name="Argument.name">U__threads</stringProp>
+              <stringProp name="Argument.value">${__P(threads,1)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="U__RPS" elementType="Argument">
+              <stringProp name="Argument.name">U__RPS</stringProp>
+              <stringProp name="Argument.value">${__P(RPS,1)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="U__HOST" elementType="Argument">
+              <stringProp name="Argument.name">U__HOST</stringProp>
+              <stringProp name="Argument.value">${__P(host,kong-poc.test.cicd.aws.vindicia.com)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="U__username" elementType="Argument">
+              <stringProp name="Argument.name">U__username</stringProp>
+              <stringProp name="Argument.value">${__P(username,dtvnflws_soap)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="U__password" elementType="Argument">
+              <stringProp name="Argument.name">U__password</stringProp>
+              <stringProp name="Argument.value">${__P(password,m7PNYqvWR3uE3NfivmVc8WMa2PmVpyc9)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="U__BASEURL" elementType="Argument">
+              <stringProp name="Argument.name">U__BASEURL</stringProp>
+              <stringProp name="Argument.value">${__P(baseurl,https://kong-poc.test.cicd.aws.vindicia.com)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="creditCards" elementType="Argument">
+              <stringProp name="Argument.name">creditCards</stringProp>
+              <stringProp name="Argument.value">4555555555555550,377777777777770,4444444444444455,5555555555555565,6011000994116667,4111111111111111</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="U__PRODUCT" elementType="Argument">
+              <stringProp name="Argument.name">U__PRODUCT</stringProp>
+              <stringProp name="Argument.value">onetimer</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="U__CAMPAIGN-CODE" elementType="Argument">
+              <stringProp name="Argument.name">U__CAMPAIGN-CODE</stringProp>
+              <stringProp name="Argument.value">PROMO-2022-03</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="U__BILLING-PLAN-ID" elementType="Argument">
+              <stringProp name="Argument.name">U__BILLING-PLAN-ID</stringProp>
+              <stringProp name="Argument.value">2022_NFLOTT_BILLING_PLAN_4PAY</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="TestEnv:Soap-Auth" enabled="true">
+          <collectionProp name="AuthManager.auth_list">
+            <elementProp name="" elementType="Authorization">
+              <stringProp name="Authorization.url">${U__BASEURL}</stringProp>
+              <stringProp name="Authorization.username">${U__username}</stringProp>
+              <stringProp name="Authorization.password">${U__password}</stringProp>
+              <stringProp name="Authorization.domain"></stringProp>
+              <stringProp name="Authorization.realm"></stringProp>
+            </elementProp>
+          </collectionProp>
+          <boolProp name="AuthManager.controlledByThreadGroup">false</boolProp>
+          <stringProp name="TestPlan.comments">soap Auth details</stringProp>
+        </AuthManager>
+        <hashTree/>
+        <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="TestEnv:URL" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${U__HOST}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path"></stringProp>
+          <stringProp name="TestPlan.comments">Making it configurable to point the test to any ENV</stringProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </ConfigTestElement>
+        <hashTree/>
+        <ConstantThroughputTimer guiclass="TestBeanGUI" testclass="ConstantThroughputTimer" testname="Constant Throughput Timer" enabled="false">
+          <stringProp name="TestPlan.comments">5 TPS</stringProp>
+          <stringProp name="throughput">${U__RPS}</stringProp>
+          <intProp name="calcMode">3</intProp>
+        </ConstantThroughputTimer>
+        <hashTree/>
+        <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="Global Variables" enabled="false">
+          <collectionProp name="UserParameters.names">
+            <stringProp name="-984615863">U__BASEURL</stringProp>
+          </collectionProp>
+          <collectionProp name="UserParameters.thread_values">
+            <collectionProp name="2042219247">
+              <stringProp name="81397457">${__P(baseurl,https://api.qa10.us-west.vindicia.com)}</stringProp>
+            </collectionProp>
+          </collectionProp>
+          <boolProp name="UserParameters.per_iteration">false</boolProp>
+        </UserParameters>
+        <hashTree/>
+        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller -60%" enabled="true">
+          <intProp name="ThroughputController.style">1</intProp>
+          <boolProp name="ThroughputController.perThread">false</boolProp>
+          <intProp name="ThroughputController.maxThroughput">70</intProp>
+          <FloatProperty>
+            <name>ThroughputController.percentThroughput</name>
+            <value>60.0</value>
+            <savedValue>0.0</savedValue>
+          </FloatProperty>
+        </ThroughputController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET /billing_plans" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">rest/billing_plans</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="timestamp" enabled="true">
+              <stringProp name="maximumValue">100000</stringProp>
+              <stringProp name="minimumValue">1</stringProp>
+              <stringProp name="outputFormat"></stringProp>
+              <boolProp name="perThread">false</boolProp>
+              <stringProp name="randomSeed"></stringProp>
+              <stringProp name="variableName">timeStamp</stringProp>
+            </RandomVariableConfig>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="49586">200</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET /products" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">rest/products</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="timestamp" enabled="true">
+              <stringProp name="maximumValue">100000</stringProp>
+              <stringProp name="minimumValue">1</stringProp>
+              <stringProp name="outputFormat"></stringProp>
+              <boolProp name="perThread">false</boolProp>
+              <stringProp name="randomSeed"></stringProp>
+              <stringProp name="variableName">timeStamp</stringProp>
+            </RandomVariableConfig>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="49586">200</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET /campaigns" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">rest/campaigns</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="timestamp" enabled="true">
+              <stringProp name="maximumValue">100000</stringProp>
+              <stringProp name="minimumValue">1</stringProp>
+              <stringProp name="outputFormat"></stringProp>
+              <boolProp name="perThread">false</boolProp>
+              <stringProp name="randomSeed"></stringProp>
+              <stringProp name="variableName">timeStamp</stringProp>
+            </RandomVariableConfig>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="49586">200</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <RandomController guiclass="RandomControlGui" testclass="RandomController" testname="Fetch-Random Controller" enabled="false">
+            <intProp name="InterleaveControl.style">1</intProp>
+          </RandomController>
+          <hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Transactions" enabled="true"/>
+            <hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST /transaction - using CC" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+    &quot;object&quot;: &quot;Transaction&quot;,&#xd;
+    &quot;id&quot;: &quot;TRX${__Random(111111111111,999999999999)}&quot;,&#xd;
+    &quot;account&quot;: {&#xd;
+        &quot;object&quot;: &quot;Account&quot;,&#xd;
+        &quot;id&quot;: &quot;Account_${__Random(111111111111,999999999999)}&quot;&#xd;
+    },&#xd;
+    &quot;source_payment_method&quot;: {&#xd;
+         &quot;credit_card&quot;: {&#xd;
+      &quot;cvn&quot;: &quot;123&quot;,&#xd;
+      &quot;expiration_date&quot;: &quot;202005&quot;,&#xd;
+      &quot;account&quot;: &quot;4111111111111111&quot;&#xd;
+    },&#xd;
+    	 &quot;type&quot;: &quot;CreditCard&quot;,&#xd;
+        &quot;id&quot;: &quot;CC_${__Random(111111111111,999999999999)}&quot;&#xd;
+    },&#xd;
+    &quot;shipping_address&quot;: {&#xd;
+        &quot;object&quot;: &quot;Address&quot;,&#xd;
+        &quot;name&quot;: &quot;c/o Charlie Brown&quot;,&#xd;
+        &quot;line1&quot;: &quot;123 Main Street&quot;,&#xd;
+        &quot;city&quot;: &quot;San Francisco&quot;,&#xd;
+        &quot;district&quot;: &quot;CA&quot;,&#xd;
+        &quot;postal_code&quot;: &quot;94105&quot;,&#xd;
+        &quot;country&quot;: &quot;US&quot;&#xd;
+    },&#xd;
+    &quot;items&quot;: [&#xd;
+        {&#xd;
+            &quot;object&quot;: &quot;TransactionItem&quot;,&#xd;
+            &quot;sku&quot;: &quot;Movie&quot;,&#xd;
+            &quot;name&quot;: &quot;PayPerView&quot;,&#xd;
+            &quot;price&quot;: 3.99,&#xd;
+            &quot;quantity&quot;: 1,&#xd;
+            &quot;tax_classification&quot;:&quot;DV017194&quot;&#xd;
+        }&#xd;
+    ],&#xd;
+    &quot;source_ip&quot;: &quot;63.201.132.182&quot;,&#xd;
+    &quot;policy&quot;: {&#xd;
+        &quot;min_chargeback_probability&quot;: 99,&#xd;
+        &quot;send_email_notification&quot;: 0&#xd;
+    },&#xd;
+    &quot;to_be_captured&quot;: true&#xd;
+    &#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain"></stringProp>
+                <stringProp name="HTTPSampler.port"></stringProp>
+                <stringProp name="HTTPSampler.protocol">https</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">transactions</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="timestamp" enabled="true">
+                  <stringProp name="maximumValue">100000</stringProp>
+                  <stringProp name="minimumValue">1</stringProp>
+                  <stringProp name="outputFormat"></stringProp>
+                  <boolProp name="perThread">false</boolProp>
+                  <stringProp name="randomSeed"></stringProp>
+                  <stringProp name="variableName">timeStamp</stringProp>
+                </RandomVariableConfig>
+                <hashTree/>
+                <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+                  <stringProp name="JSONPostProcessor.referenceNames">transactionId</stringProp>
+                  <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+                  <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+                </JSONPostProcessor>
+                <hashTree/>
+              </hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET /transaction - paid using CC" enabled="true">
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                  <collectionProp name="Arguments.arguments"/>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain"></stringProp>
+                <stringProp name="HTTPSampler.port"></stringProp>
+                <stringProp name="HTTPSampler.protocol">https</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">transactions/${transactionId}</stringProp>
+                <stringProp name="HTTPSampler.method">GET</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="timestamp" enabled="true">
+                  <stringProp name="maximumValue">100000</stringProp>
+                  <stringProp name="minimumValue">1</stringProp>
+                  <stringProp name="outputFormat"></stringProp>
+                  <boolProp name="perThread">false</boolProp>
+                  <stringProp name="randomSeed"></stringProp>
+                  <stringProp name="variableName">timeStamp</stringProp>
+                </RandomVariableConfig>
+                <hashTree/>
+                <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+                  <stringProp name="JSONPostProcessor.referenceNames">transactionId</stringProp>
+                  <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+                  <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+                </JSONPostProcessor>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="fetchCalls" enabled="false"/>
+            <hashTree/>
+          </hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Simple Controller" enabled="false"/>
+          <hashTree/>
+        </hashTree>
+        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller -40%" enabled="false">
+          <intProp name="ThroughputController.style">1</intProp>
+          <boolProp name="ThroughputController.perThread">true</boolProp>
+          <intProp name="ThroughputController.maxThroughput">30</intProp>
+          <FloatProperty>
+            <name>ThroughputController.percentThroughput</name>
+            <value>40.0</value>
+            <savedValue>0.0</savedValue>
+          </FloatProperty>
+        </ThroughputController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST /Subscriptions" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+  &quot;billing_plan&quot;: {&#xd;
+    &quot;id&quot;: &quot;${U__BILLING-PLAN-ID}&quot;&#xd;
+  },&#xd;
+  &quot;account&quot;: {&#xd;
+    &quot;email_type&quot;: &quot;html&quot;,&#xd;
+    &quot;language&quot;: &quot;EN&quot;,&#xd;
+    &quot;id&quot;: &quot;Account_${__Random(111111111111,999999999999)}&quot;,&#xd;
+    &quot;shipping_address&quot;: {&#xd;
+      &quot;city&quot;: &quot;Pleasant Prairie&quot;,&#xd;
+      &quot;district&quot;: &quot;WI&quot;,&#xd;
+      &quot;country&quot;: &quot;US&quot;,&#xd;
+      &quot;line1&quot;: &quot;18649 High Street&quot;,&#xd;
+      &quot;postal_code&quot;: &quot;53158&quot;&#xd;
+    },&#xd;
+    &quot;default_currency&quot;: &quot;USD&quot;,&#xd;
+    &quot;email&quot;: &quot;foo@foo.com&quot;,&#xd;
+    &quot;name&quot;: &quot;${__RandomString(5,BSTARC)} ${__RandomString(5,XDEFGHI)}&quot;&#xd;
+  },&#xd;
+  &quot;description&quot;: &quot;Subscription_${__Random(111111111111,999999999999)}&quot;,&#xd;
+  &quot;policy&quot;: {&#xd;
+    &quot;ignore_avs_policy&quot;: 1,&#xd;
+    &quot;validate_for_future_payment&quot;: 0,&#xd;
+    &quot;ignore_cvn_policy&quot;: 1,&#xd;
+    &quot;immediate_auth_failure_policy&quot;: &quot;doNotSaveAutoBill&quot;,&#xd;
+    &quot;min_chargeback_probability&quot;: 100&#xd;
+  },&#xd;
+  &quot;currency&quot;: &quot;USD&quot;,&#xd;
+  &quot;payment_method&quot;: {&#xd;
+    &quot;billing_address&quot;: {&#xd;
+      &quot;city&quot;: &quot;Pleasant Prairie&quot;,&#xd;
+      &quot;district&quot;: &quot;WI&quot;,&#xd;
+      &quot;country&quot;: &quot;US&quot;,&#xd;
+      &quot;line1&quot;: &quot;18649 High Street&quot;,&#xd;
+      &quot;postal_code&quot;: &quot;53158&quot;&#xd;
+    },&#xd;
+    &quot;account_holder&quot;: &quot;${__RandomString(5,BSTARC)} ${creditCard}&quot;,&#xd;
+    &quot;credit_card&quot;: {&#xd;
+      &quot;cvn&quot;: &quot;123&quot;,&#xd;
+      &quot;expiration_date&quot;: &quot;202005&quot;,&#xd;
+      &quot;account&quot;: &quot;4111111111111111&quot;&#xd;
+    },&#xd;
+    &quot;customer_description&quot;: &quot;Credit Card&quot;,&#xd;
+    &quot;active&quot;: 1,&#xd;
+    &quot;type&quot;: &quot;CreditCard&quot;,&#xd;
+    &quot;id&quot;: &quot;CC_${__Random(111111111111,999999999999)}&quot;&#xd;
+  },&#xd;
+  &quot;items&quot;: [&#xd;
+    {&#xd;
+      &quot;product&quot;: {&#xd;
+        &quot;id&quot;: &quot;onetimer&quot;&#xd;
+      },&#xd;
+      &quot;id&quot;: &quot;Item_${__Random(111111111111,999999999999)}&quot;,&#xd;
+      &quot;campaign_code&quot;: &quot;&quot;&#xd;
+    }&#xd;
+  ],&#xd;
+  &quot;id&quot;: &quot;Subscription_${__Random(111111111111,999999999999)}&quot;,&#xd;
+  &quot;minimum_commitment&quot;: 0&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">rest/subscriptions</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="timestamp" enabled="true">
+              <stringProp name="maximumValue">100000</stringProp>
+              <stringProp name="minimumValue">1</stringProp>
+              <stringProp name="outputFormat"></stringProp>
+              <boolProp name="perThread">false</boolProp>
+              <stringProp name="randomSeed"></stringProp>
+              <stringProp name="variableName">timeStamp</stringProp>
+            </RandomVariableConfig>
+            <hashTree/>
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor -subscriptionId" enabled="true">
+              <stringProp name="TestPlan.comments">subscriptionId</stringProp>
+              <stringProp name="JSONPostProcessor.referenceNames">subscriptionId-cc</stringProp>
+              <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+              <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+              <stringProp name="Scope.variable">subscriptionId</stringProp>
+            </JSONPostProcessor>
+            <hashTree/>
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor -accountId" enabled="true">
+              <stringProp name="TestPlan.comments">accountId</stringProp>
+              <stringProp name="JSONPostProcessor.referenceNames">accountId</stringProp>
+              <stringProp name="JSONPostProcessor.jsonPathExprs">$.account.id</stringProp>
+              <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+              <stringProp name="Scope.variable">subscriptionId</stringProp>
+              <stringProp name="JSONPostProcessor.defaultValues">10001</stringProp>
+            </JSONPostProcessor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="49586">200</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion - Status" enabled="true">
+              <stringProp name="JSON_PATH">$.status</stringProp>
+              <stringProp name="EXPECTED_VALUE">Active</stringProp>
+              <boolProp name="JSONVALIDATION">true</boolProp>
+              <boolProp name="EXPECT_NULL">false</boolProp>
+              <boolProp name="INVERT">false</boolProp>
+              <boolProp name="ISREGEX">true</boolProp>
+            </JSONPathAssertion>
+            <hashTree/>
+            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion -billing_state" enabled="true">
+              <stringProp name="JSON_PATH">$.billing_state</stringProp>
+              <stringProp name="EXPECTED_VALUE">Free/Trial</stringProp>
+              <boolProp name="JSONVALIDATION">false</boolProp>
+              <boolProp name="EXPECT_NULL">false</boolProp>
+              <boolProp name="INVERT">false</boolProp>
+              <boolProp name="ISREGEX">true</boolProp>
+            </JSONPathAssertion>
+            <hashTree/>
+            <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="getRandomCC" enabled="true">
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters">creditCard</stringProp>
+              <boolProp name="resetInterpreter">false</boolProp>
+              <stringProp name="script">import java.util.Random;
+
+String[] creditCards = (vars.get(&quot;creditCards&quot;)).split(&quot;,&quot;);
+
+int idx = new Random().nextInt(creditCards.length);
+String creditCard = (creditCards[idx]);
+
+vars.put(&quot;creditCard&quot;, creditCard);</stringProp>
+            </BeanShellPreProcessor>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST /Subscriptions-Update" enabled="false">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+  &quot;billing_plan&quot;: {&#xd;
+    &quot;id&quot;: &quot;${U__BILLING-PLAN-ID}&quot;&#xd;
+  },&#xd;
+  &quot;account&quot;: {&#xd;
+    &quot;email_type&quot;: &quot;html&quot;,&#xd;
+    &quot;language&quot;: &quot;EN&quot;,&#xd;
+    &quot;id&quot;: &quot;Account_${__Random(111111111111,999999999999)}&quot;,&#xd;
+    &quot;shipping_address&quot;: {&#xd;
+      &quot;city&quot;: &quot;Pleasant Prairie&quot;,&#xd;
+      &quot;district&quot;: &quot;WI&quot;,&#xd;
+      &quot;country&quot;: &quot;US&quot;,&#xd;
+      &quot;line1&quot;: &quot;18649 High Street&quot;,&#xd;
+      &quot;postal_code&quot;: &quot;53158&quot;&#xd;
+    },&#xd;
+    &quot;default_currency&quot;: &quot;USD&quot;,&#xd;
+    &quot;email&quot;: &quot;foo@foo.com&quot;,&#xd;
+    &quot;name&quot;: &quot;${__RandomString(5,BSTARC)} ${__RandomString(5,XDEFGHI)}&quot;&#xd;
+  },&#xd;
+  &quot;description&quot;: &quot;Subscription_${__Random(111111111111,999999999999)}&quot;,&#xd;
+  &quot;policy&quot;: {&#xd;
+    &quot;ignore_avs_policy&quot;: 1,&#xd;
+    &quot;validate_for_future_payment&quot;: 0,&#xd;
+    &quot;ignore_cvn_policy&quot;: 1,&#xd;
+    &quot;immediate_auth_failure_policy&quot;: &quot;doNotSaveAutoBill&quot;,&#xd;
+    &quot;min_chargeback_probability&quot;: 100&#xd;
+  },&#xd;
+  &quot;currency&quot;: &quot;USD&quot;,&#xd;
+  &quot;payment_method&quot;: {&#xd;
+    &quot;billing_address&quot;: {&#xd;
+      &quot;city&quot;: &quot;Pleasant Prairie&quot;,&#xd;
+      &quot;district&quot;: &quot;WI&quot;,&#xd;
+      &quot;country&quot;: &quot;US&quot;,&#xd;
+      &quot;line1&quot;: &quot;18649 High Street&quot;,&#xd;
+      &quot;postal_code&quot;: &quot;53158&quot;&#xd;
+    },&#xd;
+    &quot;account_holder&quot;: &quot;${__RandomString(5,BSTARC)} ${__RandomString(5,XDEFGHI)}&quot;,&#xd;
+    &quot;credit_card&quot;: {&#xd;
+      &quot;cvn&quot;: &quot;123&quot;,&#xd;
+      &quot;expiration_date&quot;: &quot;202005&quot;,&#xd;
+      &quot;account&quot;: &quot;4111111111111111&quot;&#xd;
+    },&#xd;
+    &quot;customer_description&quot;: &quot;Credit Card&quot;,&#xd;
+    &quot;active&quot;: 1,&#xd;
+    &quot;type&quot;: &quot;CreditCard&quot;,&#xd;
+    &quot;id&quot;: &quot;CC_${__Random(111111111111,999999999999)}&quot;&#xd;
+  },&#xd;
+  &quot;items&quot;: [&#xd;
+    {&#xd;
+      &quot;product&quot;: {&#xd;
+        &quot;id&quot;: &quot;onetimer&quot;&#xd;
+      },&#xd;
+      &quot;id&quot;: &quot;Item_${__Random(111111111111,999999999999)}&quot;,&#xd;
+      &quot;campaign_code&quot;: &quot;&quot;&#xd;
+    }&#xd;
+  ],&#xd;
+  &quot;id&quot;: &quot;Subscription_${__Random(111111111111,999999999999)}&quot;,&#xd;
+  &quot;minimum_commitment&quot;: 0&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">subscriptions/${subscriptionId-cc}?effective_date=today&amp;bill_prorated_period=true</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="getRandomCC" enabled="true">
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters">creditCard</stringProp>
+              <boolProp name="resetInterpreter">false</boolProp>
+              <stringProp name="script">import java.util.Random;
+
+String[] creditCards = (vars.get(&quot;creditCards&quot;)).split(&quot;,&quot;);
+
+int idx = new Random().nextInt(creditCards.length);
+String creditCard = (creditCards[idx]);
+
+vars.put(&quot;creditCard&quot;, creditCard);</stringProp>
+            </BeanShellPreProcessor>
+            <hashTree/>
+            <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="timestamp" enabled="true">
+              <stringProp name="maximumValue">100000</stringProp>
+              <stringProp name="minimumValue">1</stringProp>
+              <stringProp name="outputFormat"></stringProp>
+              <boolProp name="perThread">false</boolProp>
+              <stringProp name="randomSeed"></stringProp>
+              <stringProp name="variableName">timeStamp</stringProp>
+            </RandomVariableConfig>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="49586">200</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST /Subscriptions" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+  &quot;billing_plan&quot;: {&#xd;
+    &quot;id&quot;: &quot;${U__BILLING-PLAN-ID}&quot;&#xd;
+  },&#xd;
+  &quot;account&quot;: {&#xd;
+    &quot;email_type&quot;: &quot;html&quot;,&#xd;
+    &quot;language&quot;: &quot;EN&quot;,&#xd;
+    &quot;id&quot;: &quot;Account_${__Random(111111111111,999999999999)}&quot;,&#xd;
+    &quot;shipping_address&quot;: {&#xd;
+      &quot;city&quot;: &quot;Pleasant Prairie&quot;,&#xd;
+      &quot;district&quot;: &quot;WI&quot;,&#xd;
+      &quot;country&quot;: &quot;US&quot;,&#xd;
+      &quot;line1&quot;: &quot;18649 High Street&quot;,&#xd;
+      &quot;postal_code&quot;: &quot;53158&quot;&#xd;
+    },&#xd;
+    &quot;default_currency&quot;: &quot;USD&quot;,&#xd;
+    &quot;email&quot;: &quot;foo@foo.com&quot;,&#xd;
+    &quot;name&quot;: &quot;${__RandomString(5,BSTARC)} ${__RandomString(5,XDEFGHI)}&quot;&#xd;
+  },&#xd;
+  &quot;description&quot;: &quot;Subscription_${__Random(111111111111,999999999999)}&quot;,&#xd;
+  &quot;policy&quot;: {&#xd;
+    &quot;ignore_avs_policy&quot;: 1,&#xd;
+    &quot;validate_for_future_payment&quot;: 0,&#xd;
+    &quot;ignore_cvn_policy&quot;: 1,&#xd;
+    &quot;immediate_auth_failure_policy&quot;: &quot;doNotSaveAutoBill&quot;,&#xd;
+    &quot;min_chargeback_probability&quot;: 100&#xd;
+  },&#xd;
+  &quot;currency&quot;: &quot;USD&quot;,&#xd;
+  &quot;payment_method&quot;: {&#xd;
+    &quot;billing_address&quot;: {&#xd;
+      &quot;city&quot;: &quot;Pleasant Prairie&quot;,&#xd;
+      &quot;district&quot;: &quot;WI&quot;,&#xd;
+      &quot;country&quot;: &quot;US&quot;,&#xd;
+      &quot;line1&quot;: &quot;18649 High Street&quot;,&#xd;
+      &quot;postal_code&quot;: &quot;53158&quot;&#xd;
+    },&#xd;
+    &quot;account_holder&quot;: &quot;${__RandomString(5,BSTARC)} ${__RandomString(5,XDEFGHI)}&quot;,&#xd;
+    &quot;credit_card&quot;: {&#xd;
+      &quot;cvn&quot;: &quot;123&quot;,&#xd;
+      &quot;expiration_date&quot;: &quot;202005&quot;,&#xd;
+      &quot;account&quot;: &quot;4111111111111111&quot;&#xd;
+    },&#xd;
+    &quot;customer_description&quot;: &quot;Credit Card&quot;,&#xd;
+    &quot;active&quot;: 1,&#xd;
+    &quot;type&quot;: &quot;CreditCard&quot;,&#xd;
+    &quot;id&quot;: &quot;CC_${__Random(111111111111,999999999999)}&quot;&#xd;
+  },&#xd;
+  &quot;items&quot;: [&#xd;
+    {&#xd;
+      &quot;product&quot;: {&#xd;
+        &quot;id&quot;: &quot;BOOTCAMP&quot;&#xd;
+      },&#xd;
+      &quot;id&quot;: &quot;Item_${__Random(111111111111,999999999999)}&quot;,&#xd;
+      &quot;campaign_code&quot;: &quot;&quot;&#xd;
+    }&#xd;
+  ],&#xd;
+  &quot;id&quot;: &quot;Subscription_${__Random(111111111111,999999999999)}&quot;,&#xd;
+  &quot;minimum_commitment&quot;: 0&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">rest/subscriptions</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="timestamp" enabled="true">
+              <stringProp name="maximumValue">100000</stringProp>
+              <stringProp name="minimumValue">1</stringProp>
+              <stringProp name="outputFormat"></stringProp>
+              <boolProp name="perThread">false</boolProp>
+              <stringProp name="randomSeed"></stringProp>
+              <stringProp name="variableName">timeStamp</stringProp>
+            </RandomVariableConfig>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="49586">200</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion - Status" enabled="true">
+              <stringProp name="JSON_PATH">$.status</stringProp>
+              <stringProp name="EXPECTED_VALUE">Active</stringProp>
+              <boolProp name="JSONVALIDATION">true</boolProp>
+              <boolProp name="EXPECT_NULL">false</boolProp>
+              <boolProp name="INVERT">false</boolProp>
+              <boolProp name="ISREGEX">true</boolProp>
+            </JSONPathAssertion>
+            <hashTree/>
+            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion -billing_state" enabled="true">
+              <stringProp name="JSON_PATH">$.billing_state</stringProp>
+              <stringProp name="EXPECTED_VALUE">Free/Trial</stringProp>
+              <boolProp name="JSONVALIDATION">false</boolProp>
+              <boolProp name="EXPECT_NULL">false</boolProp>
+              <boolProp name="INVERT">false</boolProp>
+              <boolProp name="ISREGEX">true</boolProp>
+            </JSONPathAssertion>
+            <hashTree/>
+            <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="getRandomCC" enabled="true">
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters">creditCard</stringProp>
+              <boolProp name="resetInterpreter">false</boolProp>
+              <stringProp name="script">import java.util.Random;
+
+String[] creditCards = (vars.get(&quot;creditCards&quot;)).split(&quot;,&quot;);
+
+int idx = new Random().nextInt(creditCards.length);
+String creditCard = (creditCards[idx]);
+
+vars.put(&quot;creditCard&quot;, creditCard);</stringProp>
+            </BeanShellPreProcessor>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST /Subscriptions - PromotionCode" enabled="false">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+  &quot;billing_plan&quot;: {&#xd;
+    &quot;id&quot;: &quot;${U__BILLING-PLAN-ID}&quot;&#xd;
+  },&#xd;
+  &quot;account&quot;: {&#xd;
+    &quot;email_type&quot;: &quot;html&quot;,&#xd;
+    &quot;language&quot;: &quot;EN&quot;,&#xd;
+    &quot;id&quot;: &quot;Account_${__Random(111111111111,999999999999)}&quot;,&#xd;
+    &quot;shipping_address&quot;: {&#xd;
+      &quot;city&quot;: &quot;Pleasant Prairie&quot;,&#xd;
+      &quot;district&quot;: &quot;WI&quot;,&#xd;
+      &quot;country&quot;: &quot;US&quot;,&#xd;
+      &quot;line1&quot;: &quot;18649 High Street&quot;,&#xd;
+      &quot;postal_code&quot;: &quot;53158&quot;&#xd;
+    },&#xd;
+    &quot;default_currency&quot;: &quot;USD&quot;,&#xd;
+    &quot;email&quot;: &quot;foo@foo.com&quot;,&#xd;
+    &quot;name&quot;: &quot;${__RandomString(5,BSTARC)} ${__RandomString(5,XDEFGHI)}&quot;&#xd;
+  },&#xd;
+  &quot;description&quot;: &quot;Subscription_${__Random(111111111111,999999999999)}&quot;,&#xd;
+  &quot;policy&quot;: {&#xd;
+    &quot;ignore_avs_policy&quot;: 1,&#xd;
+    &quot;validate_for_future_payment&quot;: 0,&#xd;
+    &quot;ignore_cvn_policy&quot;: 1,&#xd;
+    &quot;immediate_auth_failure_policy&quot;: &quot;doNotSaveAutoBill&quot;,&#xd;
+    &quot;min_chargeback_probability&quot;: 100&#xd;
+  },&#xd;
+  &quot;currency&quot;: &quot;USD&quot;,&#xd;
+  &quot;payment_method&quot;: {&#xd;
+    &quot;billing_address&quot;: {&#xd;
+      &quot;city&quot;: &quot;Pleasant Prairie&quot;,&#xd;
+      &quot;district&quot;: &quot;WI&quot;,&#xd;
+      &quot;country&quot;: &quot;US&quot;,&#xd;
+      &quot;line1&quot;: &quot;18649 High Street&quot;,&#xd;
+      &quot;postal_code&quot;: &quot;53158&quot;&#xd;
+    },&#xd;
+    &quot;account_holder&quot;: &quot;${__RandomString(5,BSTARC)} ${__RandomString(5,XDEFGHI)}&quot;,&#xd;
+    &quot;credit_card&quot;: {&#xd;
+      &quot;cvn&quot;: &quot;123&quot;,&#xd;
+      &quot;expiration_date&quot;: &quot;202005&quot;,&#xd;
+      &quot;account&quot;: &quot;4111111111111111&quot;&#xd;
+    },&#xd;
+    &quot;customer_description&quot;: &quot;Credit Card&quot;,&#xd;
+    &quot;active&quot;: 1,&#xd;
+    &quot;type&quot;: &quot;CreditCard&quot;,&#xd;
+    &quot;id&quot;: &quot;CC_${__Random(111111111111,999999999999)}&quot;&#xd;
+  },&#xd;
+  &quot;items&quot;: [&#xd;
+    {&#xd;
+      &quot;product&quot;: {&#xd;
+        &quot;id&quot;: &quot;${U__PRODUCT}&quot;&#xd;
+      },&#xd;
+      &quot;id&quot;: &quot;Item_${__Random(111111111111,999999999999)}&quot;,&#xd;
+      &quot;campaign_code&quot;: &quot;${U__CAMPAIGN-CODE}&quot;&#xd;
+    }&#xd;
+  ],&#xd;
+  &quot;id&quot;: &quot;Subscription_${__Random(111111111111,999999999999)}&quot;,&#xd;
+  &quot;minimum_commitment&quot;: 0&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">subscriptions</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="timestamp" enabled="true">
+              <stringProp name="maximumValue">100000</stringProp>
+              <stringProp name="minimumValue">1</stringProp>
+              <stringProp name="outputFormat"></stringProp>
+              <boolProp name="perThread">false</boolProp>
+              <stringProp name="randomSeed"></stringProp>
+              <stringProp name="variableName">timeStamp</stringProp>
+            </RandomVariableConfig>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion - Code" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="49586">200</stringProp>
+                <stringProp name="0"></stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">40</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="getRandomCC" enabled="true">
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters">creditCard</stringProp>
+              <boolProp name="resetInterpreter">false</boolProp>
+              <stringProp name="script">import java.util.Random;
+
+String[] creditCards = (vars.get(&quot;creditCards&quot;)).split(&quot;,&quot;);
+
+int idx = new Random().nextInt(creditCards.length);
+String creditCard = (creditCards[idx]);
+
+vars.put(&quot;creditCard&quot;, creditCard);</stringProp>
+            </BeanShellPreProcessor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion - Message" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="2524">OK</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_message</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion - Status" enabled="true">
+              <stringProp name="JSON_PATH">$.status</stringProp>
+              <stringProp name="EXPECTED_VALUE">Active</stringProp>
+              <boolProp name="JSONVALIDATION">true</boolProp>
+              <boolProp name="EXPECT_NULL">false</boolProp>
+              <boolProp name="INVERT">false</boolProp>
+              <boolProp name="ISREGEX">true</boolProp>
+            </JSONPathAssertion>
+            <hashTree/>
+            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion -billing_state" enabled="true">
+              <stringProp name="JSON_PATH">$.billing_state</stringProp>
+              <stringProp name="EXPECTED_VALUE">Free Period</stringProp>
+              <boolProp name="JSONVALIDATION">true</boolProp>
+              <boolProp name="EXPECT_NULL">false</boolProp>
+              <boolProp name="INVERT">false</boolProp>
+              <boolProp name="ISREGEX">true</boolProp>
+            </JSONPathAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST /Subscriptions - CouponCode" enabled="false">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+  &quot;billing_plan&quot;: {&#xd;
+    &quot;id&quot;: &quot;Performance_QA&quot;&#xd;
+  },&#xd;
+  &quot;account&quot;: {&#xd;
+    &quot;email_type&quot;: &quot;html&quot;,&#xd;
+    &quot;language&quot;: &quot;EN&quot;,&#xd;
+    &quot;id&quot;: &quot;Account_${__Random(111111111111,999999999999)}&quot;,&#xd;
+    &quot;shipping_address&quot;: {&#xd;
+      &quot;city&quot;: &quot;Pleasant Prairie&quot;,&#xd;
+      &quot;district&quot;: &quot;WI&quot;,&#xd;
+      &quot;country&quot;: &quot;US&quot;,&#xd;
+      &quot;line1&quot;: &quot;18649 High Street&quot;,&#xd;
+      &quot;postal_code&quot;: &quot;53158&quot;&#xd;
+    },&#xd;
+    &quot;default_currency&quot;: &quot;USD&quot;,&#xd;
+    &quot;email&quot;: &quot;foo@foo.com&quot;,&#xd;
+    &quot;name&quot;: &quot;${__RandomString(5,BSTARC)} ${__RandomString(5,XDEFGHI)}&quot;&#xd;
+  },&#xd;
+  &quot;description&quot;: &quot;Subscription_${__Random(111111111111,999999999999)}&quot;,&#xd;
+  &quot;policy&quot;: {&#xd;
+    &quot;ignore_avs_policy&quot;: 1,&#xd;
+    &quot;validate_for_future_payment&quot;: 0,&#xd;
+    &quot;ignore_cvn_policy&quot;: 1,&#xd;
+    &quot;immediate_auth_failure_policy&quot;: &quot;doNotSaveAutoBill&quot;,&#xd;
+    &quot;min_chargeback_probability&quot;: 100&#xd;
+  },&#xd;
+  &quot;currency&quot;: &quot;USD&quot;,&#xd;
+  &quot;payment_method&quot;: {&#xd;
+    &quot;billing_address&quot;: {&#xd;
+      &quot;city&quot;: &quot;Pleasant Prairie&quot;,&#xd;
+      &quot;district&quot;: &quot;WI&quot;,&#xd;
+      &quot;country&quot;: &quot;US&quot;,&#xd;
+      &quot;line1&quot;: &quot;18649 High Street&quot;,&#xd;
+      &quot;postal_code&quot;: &quot;53158&quot;&#xd;
+    },&#xd;
+    &quot;account_holder&quot;: &quot;${__RandomString(5,BSTARC)} ${__RandomString(5,XDEFGHI)}&quot;,&#xd;
+    &quot;credit_card&quot;: {&#xd;
+      &quot;cvn&quot;: &quot;123&quot;,&#xd;
+      &quot;expiration_date&quot;: &quot;202005&quot;,&#xd;
+      &quot;account&quot;: &quot;4111111111111111&quot;&#xd;
+    },&#xd;
+    &quot;customer_description&quot;: &quot;Credit Card&quot;,&#xd;
+    &quot;active&quot;: 1,&#xd;
+    &quot;type&quot;: &quot;CreditCard&quot;,&#xd;
+    &quot;id&quot;: &quot;CC_${__Random(111111111111,999999999999)}&quot;&#xd;
+  },&#xd;
+  &quot;items&quot;: [&#xd;
+    {&#xd;
+      &quot;product&quot;: {&#xd;
+        &quot;id&quot;: &quot;onetimer&quot;&#xd;
+      },&#xd;
+      &quot;id&quot;: &quot;Item_${__Random(111111111111,999999999999)}&quot;,&#xd;
+      &quot;campaign_code&quot;: &quot;${campaign_code}&quot;&#xd;
+    }&#xd;
+  ],&#xd;
+  &quot;id&quot;: &quot;Subscription_${__Random(111111111111,999999999999)}&quot;,&#xd;
+  &quot;minimum_commitment&quot;: 0&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">subscriptions</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="timestamp" enabled="true">
+              <stringProp name="maximumValue">100000</stringProp>
+              <stringProp name="minimumValue">1</stringProp>
+              <stringProp name="outputFormat"></stringProp>
+              <boolProp name="perThread">false</boolProp>
+              <stringProp name="randomSeed"></stringProp>
+              <stringProp name="variableName">timeStamp</stringProp>
+            </RandomVariableConfig>
+            <hashTree/>
+            <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CampaignCodes" enabled="true">
+              <stringProp name="delimiter">\t</stringProp>
+              <stringProp name="fileEncoding"></stringProp>
+              <stringProp name="filename">campaign_codes-allyear.tsv</stringProp>
+              <boolProp name="ignoreFirstLine">false</boolProp>
+              <boolProp name="quotedData">false</boolProp>
+              <boolProp name="recycle">true</boolProp>
+              <stringProp name="shareMode">shareMode.all</stringProp>
+              <boolProp name="stopThread">false</boolProp>
+              <stringProp name="variableNames">count,campaign_code,campaign_id,random</stringProp>
+            </CSVDataSet>
+            <hashTree/>
+            <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="getRandomCC" enabled="true">
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters">creditCard</stringProp>
+              <boolProp name="resetInterpreter">false</boolProp>
+              <stringProp name="script">import java.util.Random;
+
+String[] creditCards = (vars.get(&quot;creditCards&quot;)).split(&quot;,&quot;);
+
+int idx = new Random().nextInt(creditCards.length);
+String creditCard = (creditCards[idx]);
+
+vars.put(&quot;creditCard&quot;, creditCard);</stringProp>
+            </BeanShellPreProcessor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="49586">200</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">40</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion - Status" enabled="true">
+              <stringProp name="JSON_PATH">$.status</stringProp>
+              <stringProp name="EXPECTED_VALUE">Active</stringProp>
+              <boolProp name="JSONVALIDATION">true</boolProp>
+              <boolProp name="EXPECT_NULL">false</boolProp>
+              <boolProp name="INVERT">false</boolProp>
+              <boolProp name="ISREGEX">true</boolProp>
+            </JSONPathAssertion>
+            <hashTree/>
+            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion -billing_state" enabled="true">
+              <stringProp name="JSON_PATH">$.billing_state</stringProp>
+              <stringProp name="EXPECTED_VALUE">Good Standing</stringProp>
+              <boolProp name="JSONVALIDATION">true</boolProp>
+              <boolProp name="EXPECT_NULL">false</boolProp>
+              <boolProp name="INVERT">false</boolProp>
+              <boolProp name="ISREGEX">true</boolProp>
+            </JSONPathAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST /Subscriptions" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+  &quot;billing_plan&quot;: {&#xd;
+    &quot;id&quot;: &quot;${U__BILLING-PLAN-ID}&quot;&#xd;
+  },&#xd;
+  &quot;account&quot;: {&#xd;
+    &quot;email_type&quot;: &quot;html&quot;,&#xd;
+    &quot;language&quot;: &quot;EN&quot;,&#xd;
+    &quot;id&quot;: &quot;Account_${__Random(111111111111,999999999999)}&quot;,&#xd;
+    &quot;shipping_address&quot;: {&#xd;
+      &quot;city&quot;: &quot;Pleasant Prairie&quot;,&#xd;
+      &quot;district&quot;: &quot;WI&quot;,&#xd;
+      &quot;country&quot;: &quot;US&quot;,&#xd;
+      &quot;line1&quot;: &quot;18649 High Street&quot;,&#xd;
+      &quot;postal_code&quot;: &quot;53158&quot;&#xd;
+    },&#xd;
+    &quot;default_currency&quot;: &quot;USD&quot;,&#xd;
+    &quot;email&quot;: &quot;foo@foo.com&quot;,&#xd;
+    &quot;name&quot;: &quot;${__RandomString(5,BSTARC)} ${__RandomString(5,XDEFGHI)}&quot;&#xd;
+  },&#xd;
+  &quot;description&quot;: &quot;Subscription_${__Random(111111111111,999999999999)}&quot;,&#xd;
+  &quot;policy&quot;: {&#xd;
+    &quot;ignore_avs_policy&quot;: 1,&#xd;
+    &quot;validate_for_future_payment&quot;: 0,&#xd;
+    &quot;ignore_cvn_policy&quot;: 1,&#xd;
+    &quot;immediate_auth_failure_policy&quot;: &quot;doNotSaveAutoBill&quot;,&#xd;
+    &quot;min_chargeback_probability&quot;: 100&#xd;
+  },&#xd;
+  &quot;currency&quot;: &quot;USD&quot;,&#xd;
+  &quot;payment_method&quot;: {&#xd;
+    &quot;billing_address&quot;: {&#xd;
+      &quot;city&quot;: &quot;Pleasant Prairie&quot;,&#xd;
+      &quot;district&quot;: &quot;WI&quot;,&#xd;
+      &quot;country&quot;: &quot;US&quot;,&#xd;
+      &quot;line1&quot;: &quot;18649 High Street&quot;,&#xd;
+      &quot;postal_code&quot;: &quot;53158&quot;&#xd;
+    },&#xd;
+    &quot;account_holder&quot;: &quot;${__RandomString(5,BSTARC)} ${__RandomString(5,XDEFGHI)}&quot;,&#xd;
+    &quot;credit_card&quot;: {&#xd;
+      &quot;cvn&quot;: &quot;123&quot;,&#xd;
+      &quot;expiration_date&quot;: &quot;202005&quot;,&#xd;
+      &quot;account&quot;: &quot;4111111111111111&quot;&#xd;
+    },&#xd;
+    &quot;customer_description&quot;: &quot;Credit Card&quot;,&#xd;
+    &quot;active&quot;: 1,&#xd;
+    &quot;type&quot;: &quot;CreditCard&quot;,&#xd;
+    &quot;id&quot;: &quot;CC_${__Random(111111111111,999999999999)}&quot;&#xd;
+  },&#xd;
+  &quot;items&quot;: [&#xd;
+    {&#xd;
+      &quot;product&quot;: {&#xd;
+        &quot;id&quot;: &quot;onetimer&quot;&#xd;
+      },&#xd;
+      &quot;id&quot;: &quot;Item_${__Random(111111111111,999999999999)}&quot;,&#xd;
+      &quot;campaign_code&quot;: &quot;&quot;&#xd;
+    }&#xd;
+  ],&#xd;
+  &quot;id&quot;: &quot;Subscription_${__Random(111111111111,999999999999)}&quot;,&#xd;
+  &quot;minimum_commitment&quot;: 0&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">rest/subscriptions</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="timestamp" enabled="true">
+              <stringProp name="maximumValue">100000</stringProp>
+              <stringProp name="minimumValue">1</stringProp>
+              <stringProp name="outputFormat"></stringProp>
+              <boolProp name="perThread">false</boolProp>
+              <stringProp name="randomSeed"></stringProp>
+              <stringProp name="variableName">timeStamp</stringProp>
+            </RandomVariableConfig>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="49586">200</stringProp>
+                <stringProp name="51508">400</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">40</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="getRandomCC" enabled="true">
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters">creditCard</stringProp>
+              <boolProp name="resetInterpreter">false</boolProp>
+              <stringProp name="script">import java.util.Random;
+
+String[] creditCards = (vars.get(&quot;creditCards&quot;)).split(&quot;,&quot;);
+
+int idx = new Random().nextInt(creditCards.length);
+String creditCard = (creditCards[idx]);
+
+vars.put(&quot;creditCard&quot;, creditCard);</stringProp>
+            </BeanShellPreProcessor>
+            <hashTree/>
+            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion - Status" enabled="true">
+              <stringProp name="JSON_PATH">$.status</stringProp>
+              <stringProp name="EXPECTED_VALUE">Active</stringProp>
+              <boolProp name="JSONVALIDATION">true</boolProp>
+              <boolProp name="EXPECT_NULL">false</boolProp>
+              <boolProp name="INVERT">false</boolProp>
+              <boolProp name="ISREGEX">true</boolProp>
+            </JSONPathAssertion>
+            <hashTree/>
+            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion -billing_state" enabled="true">
+              <stringProp name="JSON_PATH">$.billing_state</stringProp>
+              <stringProp name="EXPECTED_VALUE">Free Period</stringProp>
+              <boolProp name="JSONVALIDATION">true</boolProp>
+              <boolProp name="EXPECT_NULL">false</boolProp>
+              <boolProp name="INVERT">false</boolProp>
+              <boolProp name="ISREGEX">true</boolProp>
+            </JSONPathAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST/Transaction" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+   &quot;object&quot; : &quot;Transaction&quot;,&#xd;
+   &quot;id&quot; : &quot;&quot;,&#xd;
+   &quot;account&quot; : {&#xd;
+      &quot;object&quot; : &quot;Account&quot;,&#xd;
+      &quot;id&quot; : &quot;Account_${__Random(111111111111,999999999999)}&quot;&#xd;
+   },&#xd;
+   &quot;source_payment_method&quot; : {&#xd;
+      &quot;object&quot; : &quot;PaymentMethod&quot;,&#xd;
+      &quot;id&quot; : &quot;payment_${__Random(111111111111,999999999999)}&quot;,&#xd;
+      &quot;type&quot; : &quot;CreditCard&quot;,&#xd;
+      &quot;credit_card&quot; : {&#xd;
+         &quot;object&quot; : &quot;CreditCard&quot;,&#xd;
+         &quot;account&quot; : &quot;341111111111111&quot;,&#xd;
+         &quot;expiration_date&quot; : &quot;202605&quot;&#xd;
+      }&#xd;
+   },&#xd;
+   &quot;shipping_address&quot; : {&#xd;
+      &quot;object&quot; : &quot;Address&quot;,&#xd;
+      &quot;name&quot; : &quot;Donovan United&quot;,&#xd;
+      &quot;line1&quot; : &quot;18649 High Street&quot;,&#xd;
+      &quot;city&quot; : &quot;Mumbai&quot;,&#xd;
+      &quot;district&quot; : &quot;MH&quot;,&#xd;
+      &quot;postal_code&quot; : &quot;411017&quot;,&#xd;
+      &quot;country&quot; : &quot;IN&quot;&#xd;
+   },&#xd;
+   &quot;items&quot; : [&#xd;
+      {&#xd;
+         &quot;object&quot; : &quot;TransactionItem&quot;,&#xd;
+         &quot;sku&quot; : &quot;BOOTCAMP_INDIA&quot;,&#xd;
+         &quot;name&quot; : &quot;BOOTCAMP_INDIA&quot;,&#xd;
+         &quot;price&quot; : 37.95,&#xd;
+         &quot;quantity&quot; : 1&#xd;
+      }&#xd;
+   ],&#xd;
+   &quot;source_ip&quot; : &quot;63.201.132.182&quot;,&#xd;
+   &quot;policy&quot; : {&#xd;
+      &quot;min_chargeback_probability&quot; : 99,&#xd;
+      &quot;send_email_notification&quot; : 0&#xd;
+   },&#xd;
+   &quot;to_be_captured&quot; : true&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">rest/transactions?dryrun=false</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="49586">200</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor -transactionid" enabled="true">
+              <stringProp name="JSONPostProcessor.referenceNames">transactionId</stringProp>
+              <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+              <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+              <stringProp name="Scope.variable">subscriptionId</stringProp>
+              <stringProp name="JSONPostProcessor.defaultValues">10001</stringProp>
+            </JSONPostProcessor>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET /Subscription" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">rest/subscriptions/${subscriptionId-cc}</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="timestamp" enabled="true">
+              <stringProp name="maximumValue">100000</stringProp>
+              <stringProp name="minimumValue">1</stringProp>
+              <stringProp name="outputFormat"></stringProp>
+              <boolProp name="perThread">false</boolProp>
+              <stringProp name="randomSeed"></stringProp>
+              <stringProp name="variableName">timeStamp</stringProp>
+            </RandomVariableConfig>
+            <hashTree/>
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor -subscriptionId" enabled="false">
+              <stringProp name="TestPlan.comments">subscriptionId</stringProp>
+              <stringProp name="JSONPostProcessor.referenceNames">subscriptionId</stringProp>
+              <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+              <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+              <stringProp name="Scope.variable">subscriptionId</stringProp>
+              <stringProp name="JSONPostProcessor.defaultValues">10001</stringProp>
+            </JSONPostProcessor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="49586">200</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">40</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion - Status" enabled="true">
+              <stringProp name="JSON_PATH">$.status</stringProp>
+              <stringProp name="EXPECTED_VALUE">Active</stringProp>
+              <boolProp name="JSONVALIDATION">true</boolProp>
+              <boolProp name="EXPECT_NULL">false</boolProp>
+              <boolProp name="INVERT">false</boolProp>
+              <boolProp name="ISREGEX">true</boolProp>
+            </JSONPathAssertion>
+            <hashTree/>
+            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion -billing_state" enabled="true">
+              <stringProp name="JSON_PATH">$.billing_state</stringProp>
+              <stringProp name="EXPECTED_VALUE">Free Period</stringProp>
+              <boolProp name="JSONVALIDATION">true</boolProp>
+              <boolProp name="EXPECT_NULL">false</boolProp>
+              <boolProp name="INVERT">false</boolProp>
+              <boolProp name="ISREGEX">true</boolProp>
+            </JSONPathAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET /Subscription-future_transaction" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">rest/subscriptions/${subscriptionId-cc}/future_transactions?quantity=5</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="timestamp" enabled="true">
+              <stringProp name="maximumValue">100000</stringProp>
+              <stringProp name="minimumValue">1</stringProp>
+              <stringProp name="outputFormat"></stringProp>
+              <boolProp name="perThread">false</boolProp>
+              <stringProp name="randomSeed"></stringProp>
+              <stringProp name="variableName">timeStamp</stringProp>
+            </RandomVariableConfig>
+            <hashTree/>
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor -subscriptionId" enabled="false">
+              <stringProp name="TestPlan.comments">subscriptionId</stringProp>
+              <stringProp name="JSONPostProcessor.referenceNames">subscriptionId</stringProp>
+              <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+              <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+              <stringProp name="Scope.variable">subscriptionId</stringProp>
+              <stringProp name="JSONPostProcessor.defaultValues">10001</stringProp>
+            </JSONPostProcessor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="49586">200</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">40</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
+              <stringProp name="JSON_PATH">$.total_count</stringProp>
+              <stringProp name="EXPECTED_VALUE">5</stringProp>
+              <boolProp name="JSONVALIDATION">false</boolProp>
+              <boolProp name="EXPECT_NULL">false</boolProp>
+              <boolProp name="INVERT">false</boolProp>
+              <boolProp name="ISREGEX">true</boolProp>
+            </JSONPathAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET /accounts/{accountId}" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">rest/accounts/${accountId}</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="timestamp" enabled="true">
+              <stringProp name="maximumValue">100000</stringProp>
+              <stringProp name="minimumValue">1</stringProp>
+              <stringProp name="outputFormat"></stringProp>
+              <boolProp name="perThread">false</boolProp>
+              <stringProp name="randomSeed"></stringProp>
+              <stringProp name="variableName">timeStamp</stringProp>
+            </RandomVariableConfig>
+            <hashTree/>
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor -subscriptionId" enabled="false">
+              <stringProp name="TestPlan.comments">subscriptionId</stringProp>
+              <stringProp name="JSONPostProcessor.referenceNames">subscriptionId</stringProp>
+              <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+              <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+              <stringProp name="Scope.variable">subscriptionId</stringProp>
+              <stringProp name="JSONPostProcessor.defaultValues">10001</stringProp>
+            </JSONPostProcessor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="49586">200</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">40</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
+              <stringProp name="JSON_PATH">$.id</stringProp>
+              <stringProp name="EXPECTED_VALUE"></stringProp>
+              <boolProp name="JSONVALIDATION">false</boolProp>
+              <boolProp name="EXPECT_NULL">false</boolProp>
+              <boolProp name="INVERT">false</boolProp>
+              <boolProp name="ISREGEX">true</boolProp>
+            </JSONPathAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET /payment_methods?account" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">rest/payment_methods?account=${accountId}</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="timestamp" enabled="true">
+              <stringProp name="maximumValue">100000</stringProp>
+              <stringProp name="minimumValue">1</stringProp>
+              <stringProp name="outputFormat"></stringProp>
+              <boolProp name="perThread">false</boolProp>
+              <stringProp name="randomSeed"></stringProp>
+              <stringProp name="variableName">timeStamp</stringProp>
+            </RandomVariableConfig>
+            <hashTree/>
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor -subscriptionId" enabled="false">
+              <stringProp name="TestPlan.comments">subscriptionId</stringProp>
+              <stringProp name="JSONPostProcessor.referenceNames">subscriptionId</stringProp>
+              <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+              <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+              <stringProp name="Scope.variable">subscriptionId</stringProp>
+              <stringProp name="JSONPostProcessor.defaultValues">10001</stringProp>
+            </JSONPostProcessor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="49586">200</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">40</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
+              <stringProp name="JSON_PATH">$.total_count</stringProp>
+              <stringProp name="EXPECTED_VALUE">5</stringProp>
+              <boolProp name="JSONVALIDATION">false</boolProp>
+              <boolProp name="EXPECT_NULL">false</boolProp>
+              <boolProp name="INVERT">false</boolProp>
+              <boolProp name="ISREGEX">true</boolProp>
+            </JSONPathAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET /transactions/{transaction}" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">rest/transactions/${transactionId}</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="timestamp" enabled="true">
+              <stringProp name="maximumValue">100000</stringProp>
+              <stringProp name="minimumValue">1</stringProp>
+              <stringProp name="outputFormat"></stringProp>
+              <boolProp name="perThread">false</boolProp>
+              <stringProp name="randomSeed"></stringProp>
+              <stringProp name="variableName">timeStamp</stringProp>
+            </RandomVariableConfig>
+            <hashTree/>
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor -subscriptionId" enabled="false">
+              <stringProp name="TestPlan.comments">subscriptionId</stringProp>
+              <stringProp name="JSONPostProcessor.referenceNames">subscriptionId</stringProp>
+              <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+              <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+              <stringProp name="Scope.variable">subscriptionId</stringProp>
+              <stringProp name="JSONPostProcessor.defaultValues">10001</stringProp>
+            </JSONPostProcessor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="49586">200</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">40</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
+              <stringProp name="JSON_PATH">$.id</stringProp>
+              <stringProp name="EXPECTED_VALUE"></stringProp>
+              <boolProp name="JSONVALIDATION">false</boolProp>
+              <boolProp name="EXPECT_NULL">false</boolProp>
+              <boolProp name="INVERT">false</boolProp>
+              <boolProp name="ISREGEX">true</boolProp>
+            </JSONPathAssertion>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <ResultCollector guiclass="SimpleDataWriter" testclass="ResultCollector" testname="Simple Data Writer" enabled="false">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>true</responseData>
+            <samplerData>false</samplerData>
+            <xml>true</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>true</responseHeaders>
+            <requestHeaders>true</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename">respon.xml</stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Summary Report -60Threads-10RPS-900sec" enabled="true">
+        <boolProp name="ResultCollector.error_logging">true</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+        <boolProp name="useGroupName">true</boolProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="AssertionVisualizer" testclass="ResultCollector" testname="Assertion Results" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report-60Threads-10RPS-900sec" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+        <boolProp name="useGroupName">true</boolProp>
+      </ResultCollector>
+      <hashTree/>
+      <JSR223Listener guiclass="TestBeanGUI" testclass="JSR223Listener" testname="JSR223 Listener" enabled="false">
+        <stringProp name="cacheKey">true</stringProp>
+        <stringProp name="filename"></stringProp>
+        <stringProp name="parameters"></stringProp>
+        <stringProp name="script"></stringProp>
+        <stringProp name="scriptLanguage">groovy</stringProp>
+      </JSR223Listener>
+      <hashTree/>
+      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ResponseTimesOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Response Times Over Time" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+        <longProp name="interval_grouping">500</longProp>
+        <boolProp name="graph_aggregated">false</boolProp>
+        <stringProp name="include_sample_labels"></stringProp>
+        <stringProp name="exclude_sample_labels"></stringProp>
+        <stringProp name="start_offset"></stringProp>
+        <stringProp name="end_offset"></stringProp>
+        <boolProp name="include_checkbox_state">false</boolProp>
+        <boolProp name="exclude_checkbox_state">false</boolProp>
+      </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+      <hashTree/>
+      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ResponseTimesOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Response Times Over Time" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+        <longProp name="interval_grouping">500</longProp>
+        <boolProp name="graph_aggregated">false</boolProp>
+        <stringProp name="include_sample_labels"></stringProp>
+        <stringProp name="exclude_sample_labels"></stringProp>
+        <stringProp name="start_offset"></stringProp>
+        <stringProp name="end_offset"></stringProp>
+        <boolProp name="include_checkbox_state">false</boolProp>
+        <boolProp name="exclude_checkbox_state">false</boolProp>
+      </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+      <hashTree/>
+      <Summariser guiclass="SummariserGui" testclass="Summariser" testname="Generate Summary Results" enabled="true"/>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

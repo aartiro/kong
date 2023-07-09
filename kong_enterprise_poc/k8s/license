@@ -1,0 +1,16 @@
+{
+ "license": {
+  "version": 1,
+  "signature": "00f0c1af5108990f8f857848e352e5985f9aea755a8cdac91396976719eb100673ce7a5cc0c462cb0f6b41c72465839f4474a68e79802cf4aaf7c79cb6c5eecb",
+  "payload": {
+   "customer": "Vindicia",
+   "license_creation_date": "2023-02-23",
+   "product_subscription": "Kong Enterprise Subscription",
+   "support_plan": "Platinum",
+   "admin_seats": "1",
+   "dataplanes": "100",
+   "license_expiration_date": "2023-03-16",
+   "license_key": "0014100000Q3RZCAA3_a1V1K0000099g12UAA"
+  }
+ }
+}

@@ -1,0 +1,4151 @@
+{
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-response-time": "0.0018",
+      "content-length": "7",
+      "request-id": "8664f77cc585df05c7d02bc855acf55348c8aa92",
+      "content-security-policy": "default-src https:; connect-src https:; font-src https: data:; child-src https:; img-src https: data:; media-src https:;  object-src https:; script-src www.google-analytics.com 'unsafe-inline' 'unsafe-eval' https:; style-src 'unsafe-inline' https:;",
+      "server": "Mojolicious (Perl)",
+      "content-type": "text/html;charset=UTF-8",
+      "ratelimit-remaining": "4",
+      "x-kong-upstream-latency": "269",
+      "via": "kong/3.1.1.3-enterprise-edition",
+      "x-kong-proxy-latency": "153",
+      "x-ratelimit-limit-minute": "5",
+      "x-ratelimit-remaining-minute": "4",
+      "ratelimit-limit": "5",
+      "ratelimit-reset": "36",
+      "soap_id": "8664f77cc585df05c7d02bc855acf55348c8aa92",
+      "date": "Wed, 01 Mar 2023 15:10:24 GMT",
+      "x-xss-protection": "1; mode=block",
+      "connection": "close",
+      "x-content-type-options": "nosniff",
+      "cache-control": "no-store",
+      "strict-transport-security": "max-age=31536000; includeSubDomains"
+    },
+    "size": 955
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "8ccbdbe6-776c-55c2-8ccf-18c93dd9247c"
+    },
+    "paths": [
+      "/rest"
+    ],
+    "path_handling": "v0",
+    "id": "94f642af-14e7-509c-84bc-66413dafb9cd",
+    "regex_priority": 0,
+    "name": "performance-rest-route",
+    "created_at": 1677683400,
+    "updated_at": 1677683400,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677683424374,
+  "latencies": {
+    "proxy": 269,
+    "request": 422,
+    "kong": 153
+  },
+  "request": {
+    "url": "http://kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com:80/rest",
+    "size": 993,
+    "querystring": {},
+    "uri": "/rest",
+    "headers": {
+      "sec-ch-ua": "\"Chromium\";v=\"110\", \"Not A(Brand\";v=\"24\", \"Google Chrome\";v=\"110\"",
+      "x-forwarded-port": "443",
+      "x-forwarded-for": "103.121.152.163",
+      "upgrade-insecure-requests": "1",
+      "sec-fetch-site": "none",
+      "host": "kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com",
+      "sec-fetch-user": "?1",
+      "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+      "x-forwarded-proto": "https",
+      "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+      "cache-control": "max-age=0",
+      "accept-encoding": "gzip, deflate, br",
+      "cookie": "ajs_anonymous_id=5219a2d0-cbec-427c-98df-e69d855914d8; _ga=GA1.5.1891899493.1677666125; _gid=GA1.5.2101216927.1677666125",
+      "sec-fetch-dest": "document",
+      "sec-fetch-mode": "navigate",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"macOS\"",
+      "x-amzn-trace-id": "Root=1-63ff6ae0-2e1d468c3fa003a5116f45d7",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "method": "GET"
+  },
+  "client_ip": "10.52.73.25",
+  "tries": [
+    {
+      "ip": "99.83.232.244",
+      "balancer_latency": 0,
+      "port": 443,
+      "balancer_start": 1677683424527
+    }
+  ],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "path": "/",
+    "id": "8ccbdbe6-776c-55c2-8ccf-18c93dd9247c",
+    "tags": [
+      "performance-rest"
+    ],
+    "name": "performance-rest-service",
+    "created_at": 1677683400,
+    "retries": 5,
+    "updated_at": 1677683400,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "api.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-response-time": "0.0017",
+      "content-length": "7",
+      "request-id": "631558373b290e5cdd521e96296f025f50563be1",
+      "content-security-policy": "default-src https:; connect-src https:; font-src https: data:; child-src https:; img-src https: data:; media-src https:;  object-src https:; script-src www.google-analytics.com 'unsafe-inline' 'unsafe-eval' https:; style-src 'unsafe-inline' https:;",
+      "server": "Mojolicious (Perl)",
+      "content-type": "text/html;charset=UTF-8",
+      "ratelimit-remaining": "3",
+      "x-kong-upstream-latency": "259",
+      "via": "kong/3.1.1.3-enterprise-edition",
+      "x-kong-proxy-latency": "1",
+      "x-ratelimit-limit-minute": "5",
+      "x-ratelimit-remaining-minute": "3",
+      "ratelimit-limit": "5",
+      "ratelimit-reset": "32",
+      "soap_id": "631558373b290e5cdd521e96296f025f50563be1",
+      "date": "Wed, 01 Mar 2023 15:10:28 GMT",
+      "x-xss-protection": "1; mode=block",
+      "connection": "close",
+      "x-content-type-options": "nosniff",
+      "cache-control": "no-store",
+      "strict-transport-security": "max-age=31536000; includeSubDomains"
+    },
+    "size": 953
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "8ccbdbe6-776c-55c2-8ccf-18c93dd9247c"
+    },
+    "paths": [
+      "/rest"
+    ],
+    "path_handling": "v0",
+    "id": "94f642af-14e7-509c-84bc-66413dafb9cd",
+    "regex_priority": 0,
+    "name": "performance-rest-route",
+    "created_at": 1677683400,
+    "updated_at": 1677683400,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677683428184,
+  "latencies": {
+    "proxy": 259,
+    "request": 260,
+    "kong": 1
+  },
+  "request": {
+    "url": "http://kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com:80/rest",
+    "size": 1010,
+    "querystring": {},
+    "uri": "/rest",
+    "headers": {
+      "sec-ch-ua": "\"Chromium\";v=\"110\", \"Not A(Brand\";v=\"24\", \"Google Chrome\";v=\"110\"",
+      "x-forwarded-port": "443",
+      "x-forwarded-for": "103.121.152.163",
+      "upgrade-insecure-requests": "1",
+      "sec-fetch-site": "none",
+      "host": "kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com",
+      "sec-fetch-user": "?1",
+      "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+      "x-forwarded-proto": "https",
+      "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "cookie": "ajs_anonymous_id=5219a2d0-cbec-427c-98df-e69d855914d8; _ga=GA1.5.1891899493.1677666125; _gid=GA1.5.2101216927.1677666125",
+      "accept-encoding": "gzip, deflate, br",
+      "sec-fetch-dest": "document",
+      "sec-fetch-mode": "navigate",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"macOS\"",
+      "x-amzn-trace-id": "Root=1-63ff6ae4-405237a5129598c062a11868",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "method": "GET"
+  },
+  "client_ip": "10.52.73.25",
+  "tries": [
+    {
+      "ip": "75.2.60.56",
+      "balancer_latency": 0,
+      "port": 443,
+      "balancer_start": 1677683428185
+    }
+  ],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "path": "/",
+    "id": "8ccbdbe6-776c-55c2-8ccf-18c93dd9247c",
+    "tags": [
+      "performance-rest"
+    ],
+    "name": "performance-rest-service",
+    "created_at": 1677683400,
+    "retries": 5,
+    "updated_at": 1677683400,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "api.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-response-time": "0.0017",
+      "content-length": "7",
+      "request-id": "817a4e2f6e1c9864ecb7d8d300f0ba2004c8097b",
+      "content-security-policy": "default-src https:; connect-src https:; font-src https: data:; child-src https:; img-src https: data:; media-src https:;  object-src https:; script-src www.google-analytics.com 'unsafe-inline' 'unsafe-eval' https:; style-src 'unsafe-inline' https:;",
+      "server": "Mojolicious (Perl)",
+      "content-type": "text/html;charset=UTF-8",
+      "ratelimit-remaining": "2",
+      "x-kong-upstream-latency": "77",
+      "via": "kong/3.1.1.3-enterprise-edition",
+      "x-kong-proxy-latency": "1",
+      "x-ratelimit-limit-minute": "5",
+      "x-ratelimit-remaining-minute": "2",
+      "ratelimit-limit": "5",
+      "ratelimit-reset": "31",
+      "soap_id": "817a4e2f6e1c9864ecb7d8d300f0ba2004c8097b",
+      "date": "Wed, 01 Mar 2023 15:10:29 GMT",
+      "x-xss-protection": "1; mode=block",
+      "connection": "close",
+      "x-content-type-options": "nosniff",
+      "cache-control": "no-store",
+      "strict-transport-security": "max-age=31536000; includeSubDomains"
+    },
+    "size": 952
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "8ccbdbe6-776c-55c2-8ccf-18c93dd9247c"
+    },
+    "paths": [
+      "/rest"
+    ],
+    "path_handling": "v0",
+    "id": "94f642af-14e7-509c-84bc-66413dafb9cd",
+    "regex_priority": 0,
+    "name": "performance-rest-route",
+    "created_at": 1677683400,
+    "updated_at": 1677683400,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677683429573,
+  "latencies": {
+    "proxy": 77,
+    "request": 79,
+    "kong": 2
+  },
+  "request": {
+    "url": "http://kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com:80/rest",
+    "size": 1010,
+    "querystring": {},
+    "uri": "/rest",
+    "headers": {
+      "sec-ch-ua": "\"Chromium\";v=\"110\", \"Not A(Brand\";v=\"24\", \"Google Chrome\";v=\"110\"",
+      "x-forwarded-port": "443",
+      "x-forwarded-for": "103.121.152.163",
+      "upgrade-insecure-requests": "1",
+      "sec-fetch-site": "none",
+      "host": "kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com",
+      "sec-fetch-user": "?1",
+      "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+      "x-forwarded-proto": "https",
+      "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "cookie": "ajs_anonymous_id=5219a2d0-cbec-427c-98df-e69d855914d8; _ga=GA1.5.1891899493.1677666125; _gid=GA1.5.2101216927.1677666125",
+      "accept-encoding": "gzip, deflate, br",
+      "sec-fetch-dest": "document",
+      "sec-fetch-mode": "navigate",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"macOS\"",
+      "x-amzn-trace-id": "Root=1-63ff6ae5-1329ff0a71cc031822433324",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "method": "GET"
+  },
+  "client_ip": "10.52.73.25",
+  "tries": [
+    {
+      "ip": "99.83.232.244",
+      "balancer_latency": 1,
+      "port": 443,
+      "balancer_start": 1677683429573
+    }
+  ],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "path": "/",
+    "id": "8ccbdbe6-776c-55c2-8ccf-18c93dd9247c",
+    "tags": [
+      "performance-rest"
+    ],
+    "name": "performance-rest-service",
+    "created_at": 1677683400,
+    "retries": 5,
+    "updated_at": 1677683400,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "api.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-response-time": "0.0019",
+      "content-length": "7",
+      "request-id": "c199dc4ff77537ab5d8d1abb6df58b358b26d069",
+      "content-security-policy": "default-src https:; connect-src https:; font-src https: data:; child-src https:; img-src https: data:; media-src https:;  object-src https:; script-src www.google-analytics.com 'unsafe-inline' 'unsafe-eval' https:; style-src 'unsafe-inline' https:;",
+      "server": "Mojolicious (Perl)",
+      "content-type": "text/html;charset=UTF-8",
+      "ratelimit-remaining": "1",
+      "x-kong-upstream-latency": "75",
+      "via": "kong/3.1.1.3-enterprise-edition",
+      "x-kong-proxy-latency": "0",
+      "x-ratelimit-limit-minute": "5",
+      "x-ratelimit-remaining-minute": "1",
+      "ratelimit-limit": "5",
+      "ratelimit-reset": "30",
+      "soap_id": "c199dc4ff77537ab5d8d1abb6df58b358b26d069",
+      "date": "Wed, 01 Mar 2023 15:10:30 GMT",
+      "x-xss-protection": "1; mode=block",
+      "connection": "close",
+      "x-content-type-options": "nosniff",
+      "cache-control": "no-store",
+      "strict-transport-security": "max-age=31536000; includeSubDomains"
+    },
+    "size": 952
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "8ccbdbe6-776c-55c2-8ccf-18c93dd9247c"
+    },
+    "paths": [
+      "/rest"
+    ],
+    "path_handling": "v0",
+    "id": "94f642af-14e7-509c-84bc-66413dafb9cd",
+    "regex_priority": 0,
+    "name": "performance-rest-route",
+    "created_at": 1677683400,
+    "updated_at": 1677683400,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677683430717,
+  "latencies": {
+    "proxy": 75,
+    "request": 75,
+    "kong": 0
+  },
+  "request": {
+    "url": "http://kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com:80/rest",
+    "size": 1010,
+    "querystring": {},
+    "uri": "/rest",
+    "headers": {
+      "sec-ch-ua": "\"Chromium\";v=\"110\", \"Not A(Brand\";v=\"24\", \"Google Chrome\";v=\"110\"",
+      "x-forwarded-port": "443",
+      "x-forwarded-for": "103.121.152.163",
+      "upgrade-insecure-requests": "1",
+      "sec-fetch-site": "none",
+      "host": "kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com",
+      "sec-fetch-user": "?1",
+      "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+      "x-forwarded-proto": "https",
+      "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "cookie": "ajs_anonymous_id=5219a2d0-cbec-427c-98df-e69d855914d8; _ga=GA1.5.1891899493.1677666125; _gid=GA1.5.2101216927.1677666125",
+      "accept-encoding": "gzip, deflate, br",
+      "sec-fetch-dest": "document",
+      "sec-fetch-mode": "navigate",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"macOS\"",
+      "x-amzn-trace-id": "Root=1-63ff6ae6-76b34d5c4893cab62991ccf7",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "method": "GET"
+  },
+  "client_ip": "10.52.73.25",
+  "tries": [
+    {
+      "ip": "75.2.60.56",
+      "balancer_latency": 0,
+      "port": 443,
+      "balancer_start": 1677683430717
+    }
+  ],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "path": "/",
+    "id": "8ccbdbe6-776c-55c2-8ccf-18c93dd9247c",
+    "tags": [
+      "performance-rest"
+    ],
+    "name": "performance-rest-service",
+    "created_at": 1677683400,
+    "retries": 5,
+    "updated_at": 1677683400,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "api.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-response-time": "0.0018",
+      "content-length": "7",
+      "request-id": "b553035213b5ff1ab8b37318e3598a9f61dbacd3",
+      "content-security-policy": "default-src https:; connect-src https:; font-src https: data:; child-src https:; img-src https: data:; media-src https:;  object-src https:; script-src www.google-analytics.com 'unsafe-inline' 'unsafe-eval' https:; style-src 'unsafe-inline' https:;",
+      "server": "Mojolicious (Perl)",
+      "content-type": "text/html;charset=UTF-8",
+      "ratelimit-remaining": "0",
+      "x-kong-upstream-latency": "77",
+      "via": "kong/3.1.1.3-enterprise-edition",
+      "x-kong-proxy-latency": "1",
+      "x-ratelimit-limit-minute": "5",
+      "x-ratelimit-remaining-minute": "0",
+      "ratelimit-limit": "5",
+      "ratelimit-reset": "29",
+      "soap_id": "b553035213b5ff1ab8b37318e3598a9f61dbacd3",
+      "date": "Wed, 01 Mar 2023 15:10:31 GMT",
+      "x-xss-protection": "1; mode=block",
+      "connection": "close",
+      "x-content-type-options": "nosniff",
+      "cache-control": "no-store",
+      "strict-transport-security": "max-age=31536000; includeSubDomains"
+    },
+    "size": 952
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "8ccbdbe6-776c-55c2-8ccf-18c93dd9247c"
+    },
+    "paths": [
+      "/rest"
+    ],
+    "path_handling": "v0",
+    "id": "94f642af-14e7-509c-84bc-66413dafb9cd",
+    "regex_priority": 0,
+    "name": "performance-rest-route",
+    "created_at": 1677683400,
+    "updated_at": 1677683400,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677683431760,
+  "latencies": {
+    "proxy": 77,
+    "request": 78,
+    "kong": 1
+  },
+  "request": {
+    "url": "http://kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com:80/rest",
+    "size": 1010,
+    "querystring": {},
+    "uri": "/rest",
+    "headers": {
+      "sec-ch-ua": "\"Chromium\";v=\"110\", \"Not A(Brand\";v=\"24\", \"Google Chrome\";v=\"110\"",
+      "x-forwarded-port": "443",
+      "x-forwarded-for": "103.121.152.163",
+      "upgrade-insecure-requests": "1",
+      "sec-fetch-site": "none",
+      "host": "kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com",
+      "sec-fetch-user": "?1",
+      "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+      "x-forwarded-proto": "https",
+      "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "cookie": "ajs_anonymous_id=5219a2d0-cbec-427c-98df-e69d855914d8; _ga=GA1.5.1891899493.1677666125; _gid=GA1.5.2101216927.1677666125",
+      "accept-encoding": "gzip, deflate, br",
+      "sec-fetch-dest": "document",
+      "sec-fetch-mode": "navigate",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"macOS\"",
+      "x-amzn-trace-id": "Root=1-63ff6ae7-042bd56068bcb9e876b056b1",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "method": "GET"
+  },
+  "client_ip": "10.52.73.25",
+  "tries": [
+    {
+      "ip": "99.83.232.244",
+      "balancer_latency": 0,
+      "port": 443,
+      "balancer_start": 1677683431761
+    }
+  ],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "path": "/",
+    "id": "8ccbdbe6-776c-55c2-8ccf-18c93dd9247c",
+    "tags": [
+      "performance-rest"
+    ],
+    "name": "performance-rest-service",
+    "created_at": 1677683400,
+    "retries": 5,
+    "updated_at": 1677683400,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "api.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 429,
+    "headers": {
+      "content-length": "37",
+      "x-ratelimit-limit-minute": "5",
+      "x-ratelimit-remaining-minute": "0",
+      "ratelimit-limit": "5",
+      "ratelimit-reset": "40",
+      "content-type": "application/json; charset=utf-8",
+      "server": "kong/3.1.1.3-enterprise-edition",
+      "connection": "close",
+      "x-kong-response-latency": "1",
+      "retry-after": "40",
+      "ratelimit-remaining": "0"
+    },
+    "size": 412
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "8ccbdbe6-776c-55c2-8ccf-18c93dd9247c"
+    },
+    "paths": [
+      "/rest"
+    ],
+    "path_handling": "v0",
+    "id": "94f642af-14e7-509c-84bc-66413dafb9cd",
+    "regex_priority": 0,
+    "name": "performance-rest-route",
+    "created_at": 1677683400,
+    "updated_at": 1677683400,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677683432747,
+  "latencies": {
+    "proxy": -1,
+    "request": 1,
+    "kong": 1
+  },
+  "request": {
+    "url": "http://kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com:80/rest",
+    "size": 1010,
+    "querystring": {},
+    "uri": "/rest",
+    "headers": {
+      "sec-ch-ua": "\"Chromium\";v=\"110\", \"Not A(Brand\";v=\"24\", \"Google Chrome\";v=\"110\"",
+      "x-forwarded-port": "443",
+      "x-forwarded-for": "103.121.152.163",
+      "upgrade-insecure-requests": "1",
+      "sec-fetch-site": "none",
+      "host": "kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com",
+      "sec-fetch-user": "?1",
+      "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+      "x-forwarded-proto": "https",
+      "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "cookie": "ajs_anonymous_id=5219a2d0-cbec-427c-98df-e69d855914d8; _ga=GA1.5.1891899493.1677666125; _gid=GA1.5.2101216927.1677666125",
+      "accept-encoding": "gzip, deflate, br",
+      "sec-fetch-dest": "document",
+      "sec-fetch-mode": "navigate",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"macOS\"",
+      "x-amzn-trace-id": "Root=1-63ff6ae8-5671302730bb215e0b20744c",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "method": "GET"
+  },
+  "client_ip": "10.52.73.25",
+  "tries": [],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "path": "/",
+    "id": "8ccbdbe6-776c-55c2-8ccf-18c93dd9247c",
+    "tags": [
+      "performance-rest"
+    ],
+    "name": "performance-rest-service",
+    "created_at": 1677683400,
+    "retries": 5,
+    "updated_at": 1677683400,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "api.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 500,
+    "headers": {
+      "content-type": "application/json; charset=utf-8",
+      "content-length": "42",
+      "connection": "close",
+      "x-kong-response-latency": "0",
+      "server": "kong/3.1.1.3-enterprise-edition"
+    },
+    "size": 272
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684009381,
+  "latencies": {
+    "proxy": -1,
+    "request": 0,
+    "kong": 0
+  },
+  "request": {
+    "url": "http://10.52.73.43:80/",
+    "size": 132,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "connection": "close",
+      "accept-encoding": "gzip, compressed",
+      "user-agent": "ELB-HealthChecker/2.0",
+      "host": "10.52.73.43:30010"
+    },
+    "method": "GET"
+  },
+  "client_ip": "10.52.73.43",
+  "tries": [],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 500,
+    "headers": {
+      "content-type": "application/json; charset=utf-8",
+      "content-length": "42",
+      "connection": "close",
+      "x-kong-response-latency": "1",
+      "server": "kong/3.1.1.3-enterprise-edition"
+    },
+    "size": 272
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684009382,
+  "latencies": {
+    "proxy": -1,
+    "request": 1,
+    "kong": 1
+  },
+  "request": {
+    "url": "http://10.52.73.25:80/",
+    "size": 132,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "connection": "close",
+      "accept-encoding": "gzip, compressed",
+      "user-agent": "ELB-HealthChecker/2.0",
+      "host": "10.52.73.25:30010"
+    },
+    "method": "GET"
+  },
+  "client_ip": "10.52.73.25",
+  "tries": [],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 500,
+    "headers": {
+      "content-type": "application/json; charset=utf-8",
+      "content-length": "42",
+      "connection": "close",
+      "x-kong-response-latency": "0",
+      "server": "kong/3.1.1.3-enterprise-edition"
+    },
+    "size": 272
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684023285,
+  "latencies": {
+    "proxy": -1,
+    "request": 1,
+    "kong": 0
+  },
+  "request": {
+    "url": "http://10.52.73.43:80/",
+    "size": 132,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "connection": "close",
+      "accept-encoding": "gzip, compressed",
+      "user-agent": "ELB-HealthChecker/2.0",
+      "host": "10.52.73.43:30010"
+    },
+    "method": "GET"
+  },
+  "client_ip": "10.52.73.43",
+  "tries": [],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 500,
+    "headers": {
+      "content-type": "application/json; charset=utf-8",
+      "content-length": "42",
+      "connection": "close",
+      "x-kong-response-latency": "0",
+      "server": "kong/3.1.1.3-enterprise-edition"
+    },
+    "size": 272
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684023286,
+  "latencies": {
+    "proxy": -1,
+    "request": 0,
+    "kong": 0
+  },
+  "request": {
+    "url": "http://10.52.73.25:80/",
+    "size": 132,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "connection": "close",
+      "accept-encoding": "gzip, compressed",
+      "user-agent": "ELB-HealthChecker/2.0",
+      "host": "10.52.73.25:30010"
+    },
+    "method": "GET"
+  },
+  "client_ip": "10.52.73.25",
+  "tries": [],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 500,
+    "headers": {
+      "content-type": "application/json; charset=utf-8",
+      "content-length": "42",
+      "connection": "close",
+      "x-kong-response-latency": "0",
+      "server": "kong/3.1.1.3-enterprise-edition"
+    },
+    "size": 272
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684039384,
+  "latencies": {
+    "proxy": -1,
+    "request": 0,
+    "kong": 0
+  },
+  "request": {
+    "url": "http://10.52.73.43:80/",
+    "size": 132,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "connection": "close",
+      "accept-encoding": "gzip, compressed",
+      "user-agent": "ELB-HealthChecker/2.0",
+      "host": "10.52.73.43:30010"
+    },
+    "method": "GET"
+  },
+  "client_ip": "10.52.73.43",
+  "tries": [],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 500,
+    "headers": {
+      "content-type": "application/json; charset=utf-8",
+      "content-length": "42",
+      "connection": "close",
+      "x-kong-response-latency": "1",
+      "server": "kong/3.1.1.3-enterprise-edition"
+    },
+    "size": 272
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684039384,
+  "latencies": {
+    "proxy": -1,
+    "request": 1,
+    "kong": 1
+  },
+  "request": {
+    "url": "http://10.52.73.25:80/",
+    "size": 132,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "connection": "close",
+      "accept-encoding": "gzip, compressed",
+      "user-agent": "ELB-HealthChecker/2.0",
+      "host": "10.52.73.25:30010"
+    },
+    "method": "GET"
+  },
+  "client_ip": "10.52.73.25",
+  "tries": [],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 500,
+    "headers": {
+      "content-type": "application/json; charset=utf-8",
+      "content-length": "42",
+      "connection": "close",
+      "x-kong-response-latency": "0",
+      "server": "kong/3.1.1.3-enterprise-edition"
+    },
+    "size": 272
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684053288,
+  "latencies": {
+    "proxy": -1,
+    "request": 0,
+    "kong": 0
+  },
+  "request": {
+    "url": "http://10.52.73.43:80/",
+    "size": 132,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "connection": "close",
+      "accept-encoding": "gzip, compressed",
+      "user-agent": "ELB-HealthChecker/2.0",
+      "host": "10.52.73.43:30010"
+    },
+    "method": "GET"
+  },
+  "client_ip": "10.52.73.43",
+  "tries": [],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 500,
+    "headers": {
+      "content-type": "application/json; charset=utf-8",
+      "content-length": "42",
+      "connection": "close",
+      "x-kong-response-latency": "0",
+      "server": "kong/3.1.1.3-enterprise-edition"
+    },
+    "size": 272
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684053289,
+  "latencies": {
+    "proxy": -1,
+    "request": 0,
+    "kong": 0
+  },
+  "request": {
+    "url": "http://10.52.73.25:80/",
+    "size": 132,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "connection": "close",
+      "accept-encoding": "gzip, compressed",
+      "user-agent": "ELB-HealthChecker/2.0",
+      "host": "10.52.73.25:30010"
+    },
+    "method": "GET"
+  },
+  "client_ip": "10.52.73.25",
+  "tries": [],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-response-time": "0.0088",
+      "content-length": "630",
+      "soapserver": "SOAP::Lite/Perl/1.20",
+      "content-security-policy": "default-src https:; connect-src https:; font-src https: data:; child-src https:; img-src https: data:; media-src https:;  object-src https:; script-src www.google-analytics.com 'unsafe-inline' 'unsafe-eval' https:; style-src 'unsafe-inline' https:;",
+      "server": "Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips mod_apreq2-20101207/2.8.1 mod_perl/2.0.11 Perl/v5.16.3",
+      "content-type": "text/xml; charset=utf-8",
+      "ratelimit-remaining": "8",
+      "via": "kong/3.1.1.3-enterprise-edition",
+      "x-kong-proxy-latency": "15",
+      "x-ratelimit-limit-minute": "10",
+      "x-ratelimit-remaining-minute": "8",
+      "ratelimit-limit": "10",
+      "ratelimit-reset": "54",
+      "date": "Wed, 01 Mar 2023 15:21:07 GMT",
+      "x-xss-protection": "1; mode=block",
+      "connection": "close",
+      "x-content-type-options": "nosniff",
+      "x-kong-upstream-latency": "268",
+      "strict-transport-security": "max-age=31536000; includeSubDomains"
+    },
+    "size": 1563
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "consumer": {
+    "created_at": 1677684008,
+    "username": "rajatest8000@test.com",
+    "type": 0,
+    "id": "3d71c74d-330f-5484-90b5-0a8fa81f7c7d"
+  },
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684066867,
+  "latencies": {
+    "proxy": 268,
+    "request": 283,
+    "kong": 15
+  },
+  "request": {
+    "url": "http://kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com:80/",
+    "size": 4198,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "x-forwarded-proto": "https",
+      "x-forwarded-port": "443",
+      "x-forwarded-for": "202.91.134.74",
+      "content-type": "text/plain",
+      "host": "kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com",
+      "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_311)",
+      "authorization": "REDACTED",
+      "x-amzn-trace-id": "Root=1-63ff6d62-623f2c6e29987039120f4356",
+      "content-length": "3831"
+    },
+    "method": "POST"
+  },
+  "client_ip": "10.52.73.25",
+  "tries": [
+    {
+      "ip": "99.83.130.248",
+      "balancer_latency": 0,
+      "port": 443,
+      "balancer_start": 1677684066882
+    }
+  ],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-response-time": "0.0089",
+      "content-length": "630",
+      "soapserver": "SOAP::Lite/Perl/1.20",
+      "content-security-policy": "default-src https:; connect-src https:; font-src https: data:; child-src https:; img-src https: data:; media-src https:;  object-src https:; script-src www.google-analytics.com 'unsafe-inline' 'unsafe-eval' https:; style-src 'unsafe-inline' https:;",
+      "server": "Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips mod_apreq2-20101207/2.8.1 mod_perl/2.0.11 Perl/v5.16.3",
+      "content-type": "text/xml; charset=utf-8",
+      "ratelimit-remaining": "9",
+      "via": "kong/3.1.1.3-enterprise-edition",
+      "x-kong-proxy-latency": "26",
+      "x-ratelimit-limit-minute": "10",
+      "x-ratelimit-remaining-minute": "9",
+      "ratelimit-limit": "10",
+      "ratelimit-reset": "54",
+      "date": "Wed, 01 Mar 2023 15:21:07 GMT",
+      "x-xss-protection": "1; mode=block",
+      "connection": "close",
+      "x-content-type-options": "nosniff",
+      "x-kong-upstream-latency": "274",
+      "strict-transport-security": "max-age=31536000; includeSubDomains"
+    },
+    "size": 1563
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "consumer": {
+    "created_at": 1677684008,
+    "username": "rajatest8000@test.com",
+    "type": 0,
+    "id": "3d71c74d-330f-5484-90b5-0a8fa81f7c7d"
+  },
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684066856,
+  "latencies": {
+    "proxy": 274,
+    "request": 300,
+    "kong": 26
+  },
+  "request": {
+    "url": "http://kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com:80/",
+    "size": 4198,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "x-forwarded-proto": "https",
+      "x-forwarded-port": "443",
+      "x-forwarded-for": "202.91.134.74",
+      "content-type": "text/plain",
+      "host": "kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com",
+      "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_311)",
+      "authorization": "REDACTED",
+      "x-amzn-trace-id": "Root=1-63ff6d62-111091d5081802621c9ddc64",
+      "content-length": "3831"
+    },
+    "method": "POST"
+  },
+  "client_ip": "10.52.73.25",
+  "tries": [
+    {
+      "ip": "75.2.72.54",
+      "balancer_latency": 0,
+      "port": 443,
+      "balancer_start": 1677684066882
+    }
+  ],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-response-time": "0.0088",
+      "content-length": "630",
+      "soapserver": "SOAP::Lite/Perl/1.20",
+      "content-security-policy": "default-src https:; connect-src https:; font-src https: data:; child-src https:; img-src https: data:; media-src https:;  object-src https:; script-src www.google-analytics.com 'unsafe-inline' 'unsafe-eval' https:; style-src 'unsafe-inline' https:;",
+      "server": "Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips mod_apreq2-20101207/2.8.1 mod_perl/2.0.11 Perl/v5.16.3",
+      "content-type": "text/xml; charset=utf-8",
+      "ratelimit-remaining": "7",
+      "via": "kong/3.1.1.3-enterprise-edition",
+      "x-kong-proxy-latency": "1",
+      "x-ratelimit-limit-minute": "10",
+      "x-ratelimit-remaining-minute": "7",
+      "ratelimit-limit": "10",
+      "ratelimit-reset": "54",
+      "date": "Wed, 01 Mar 2023 15:21:07 GMT",
+      "x-xss-protection": "1; mode=block",
+      "connection": "close",
+      "x-content-type-options": "nosniff",
+      "x-kong-upstream-latency": "282",
+      "strict-transport-security": "max-age=31536000; includeSubDomains"
+    },
+    "size": 1562
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "consumer": {
+    "created_at": 1677684008,
+    "username": "rajatest8000@test.com",
+    "type": 0,
+    "id": "3d71c74d-330f-5484-90b5-0a8fa81f7c7d"
+  },
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684066927,
+  "latencies": {
+    "proxy": 282,
+    "request": 283,
+    "kong": 1
+  },
+  "request": {
+    "url": "http://kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com:80/",
+    "size": 4198,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "x-forwarded-proto": "https",
+      "x-forwarded-port": "443",
+      "x-forwarded-for": "202.91.134.74",
+      "content-type": "text/plain",
+      "host": "kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com",
+      "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_311)",
+      "authorization": "REDACTED",
+      "x-amzn-trace-id": "Root=1-63ff6d62-011e040422b966694fd5e8bd",
+      "content-length": "3831"
+    },
+    "method": "POST"
+  },
+  "client_ip": "10.52.73.43",
+  "tries": [
+    {
+      "ip": "75.2.72.54",
+      "balancer_latency": 0,
+      "port": 443,
+      "balancer_start": 1677684066928
+    }
+  ],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-response-time": "0.0088",
+      "content-length": "630",
+      "soapserver": "SOAP::Lite/Perl/1.20",
+      "content-security-policy": "default-src https:; connect-src https:; font-src https: data:; child-src https:; img-src https: data:; media-src https:;  object-src https:; script-src www.google-analytics.com 'unsafe-inline' 'unsafe-eval' https:; style-src 'unsafe-inline' https:;",
+      "server": "Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips mod_apreq2-20101207/2.8.1 mod_perl/2.0.11 Perl/v5.16.3",
+      "content-type": "text/xml; charset=utf-8",
+      "ratelimit-remaining": "6",
+      "via": "kong/3.1.1.3-enterprise-edition",
+      "x-kong-proxy-latency": "1",
+      "x-ratelimit-limit-minute": "10",
+      "x-ratelimit-remaining-minute": "6",
+      "ratelimit-limit": "10",
+      "ratelimit-reset": "54",
+      "date": "Wed, 01 Mar 2023 15:21:07 GMT",
+      "x-xss-protection": "1; mode=block",
+      "connection": "close",
+      "x-content-type-options": "nosniff",
+      "x-kong-upstream-latency": "271",
+      "strict-transport-security": "max-age=31536000; includeSubDomains"
+    },
+    "size": 1562
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "consumer": {
+    "created_at": 1677684008,
+    "username": "rajatest8000@test.com",
+    "type": 0,
+    "id": "3d71c74d-330f-5484-90b5-0a8fa81f7c7d"
+  },
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684066953,
+  "latencies": {
+    "proxy": 271,
+    "request": 272,
+    "kong": 1
+  },
+  "request": {
+    "url": "http://kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com:80/",
+    "size": 4198,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "x-forwarded-proto": "https",
+      "x-forwarded-port": "443",
+      "x-forwarded-for": "202.91.134.74",
+      "content-type": "text/plain",
+      "host": "kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com",
+      "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_311)",
+      "authorization": "REDACTED",
+      "x-amzn-trace-id": "Root=1-63ff6d62-484f3a385d00bf9b7bd99bbf",
+      "content-length": "3831"
+    },
+    "method": "POST"
+  },
+  "client_ip": "10.52.73.43",
+  "tries": [
+    {
+      "ip": "99.83.130.248",
+      "balancer_latency": 0,
+      "port": 443,
+      "balancer_start": 1677684066954
+    }
+  ],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-response-time": "0.0086",
+      "content-length": "630",
+      "soapserver": "SOAP::Lite/Perl/1.20",
+      "content-security-policy": "default-src https:; connect-src https:; font-src https: data:; child-src https:; img-src https: data:; media-src https:;  object-src https:; script-src www.google-analytics.com 'unsafe-inline' 'unsafe-eval' https:; style-src 'unsafe-inline' https:;",
+      "server": "Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips mod_apreq2-20101207/2.8.1 mod_perl/2.0.11 Perl/v5.16.3",
+      "content-type": "text/xml; charset=utf-8",
+      "ratelimit-remaining": "5",
+      "via": "kong/3.1.1.3-enterprise-edition",
+      "x-kong-proxy-latency": "1",
+      "x-ratelimit-limit-minute": "10",
+      "x-ratelimit-remaining-minute": "5",
+      "ratelimit-limit": "10",
+      "ratelimit-reset": "54",
+      "date": "Wed, 01 Mar 2023 15:21:07 GMT",
+      "x-xss-protection": "1; mode=block",
+      "connection": "close",
+      "x-content-type-options": "nosniff",
+      "x-kong-upstream-latency": "270",
+      "strict-transport-security": "max-age=31536000; includeSubDomains"
+    },
+    "size": 1562
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "consumer": {
+    "created_at": 1677684008,
+    "username": "rajatest8000@test.com",
+    "type": 0,
+    "id": "3d71c74d-330f-5484-90b5-0a8fa81f7c7d"
+  },
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684066958,
+  "latencies": {
+    "proxy": 270,
+    "request": 272,
+    "kong": 2
+  },
+  "request": {
+    "url": "http://kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com:80/",
+    "size": 4198,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "x-forwarded-proto": "https",
+      "x-forwarded-port": "443",
+      "x-forwarded-for": "202.91.134.74",
+      "content-type": "text/plain",
+      "host": "kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com",
+      "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_311)",
+      "authorization": "REDACTED",
+      "x-amzn-trace-id": "Root=1-63ff6d62-0cf5f59d1dfd1a7363d8522f",
+      "content-length": "3831"
+    },
+    "method": "POST"
+  },
+  "client_ip": "10.52.73.25",
+  "tries": [
+    {
+      "ip": "75.2.72.54",
+      "balancer_latency": 0,
+      "port": 443,
+      "balancer_start": 1677684066959
+    }
+  ],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-response-time": "0.0034",
+      "content-length": "630",
+      "soapserver": "SOAP::Lite/Perl/1.20",
+      "content-security-policy": "default-src https:; connect-src https:; font-src https: data:; child-src https:; img-src https: data:; media-src https:;  object-src https:; script-src www.google-analytics.com 'unsafe-inline' 'unsafe-eval' https:; style-src 'unsafe-inline' https:;",
+      "server": "Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips mod_apreq2-20101207/2.8.1 mod_perl/2.0.11 Perl/v5.16.3",
+      "content-type": "text/xml; charset=utf-8",
+      "ratelimit-remaining": "3",
+      "via": "kong/3.1.1.3-enterprise-edition",
+      "x-kong-proxy-latency": "1",
+      "x-ratelimit-limit-minute": "10",
+      "x-ratelimit-remaining-minute": "3",
+      "ratelimit-limit": "10",
+      "ratelimit-reset": "53",
+      "date": "Wed, 01 Mar 2023 15:21:07 GMT",
+      "x-xss-protection": "1; mode=block",
+      "connection": "close",
+      "x-content-type-options": "nosniff",
+      "x-kong-upstream-latency": "75",
+      "strict-transport-security": "max-age=31536000; includeSubDomains"
+    },
+    "size": 1561
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "consumer": {
+    "created_at": 1677684008,
+    "username": "rajatest8000@test.com",
+    "type": 0,
+    "id": "3d71c74d-330f-5484-90b5-0a8fa81f7c7d"
+  },
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684067546,
+  "latencies": {
+    "proxy": 75,
+    "request": 76,
+    "kong": 1
+  },
+  "request": {
+    "url": "http://kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com:80/",
+    "size": 4198,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "x-forwarded-proto": "https",
+      "x-forwarded-port": "443",
+      "x-forwarded-for": "202.91.134.74",
+      "content-type": "text/plain",
+      "host": "kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com",
+      "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_311)",
+      "authorization": "REDACTED",
+      "x-amzn-trace-id": "Root=1-63ff6d63-61f407f516eae607787b947e",
+      "content-length": "3831"
+    },
+    "method": "POST"
+  },
+  "client_ip": "10.52.73.25",
+  "tries": [
+    {
+      "ip": "75.2.72.54",
+      "balancer_latency": 0,
+      "port": 443,
+      "balancer_start": 1677684067547
+    }
+  ],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-response-time": "0.0087",
+      "content-length": "630",
+      "soapserver": "SOAP::Lite/Perl/1.20",
+      "content-security-policy": "default-src https:; connect-src https:; font-src https: data:; child-src https:; img-src https: data:; media-src https:;  object-src https:; script-src www.google-analytics.com 'unsafe-inline' 'unsafe-eval' https:; style-src 'unsafe-inline' https:;",
+      "server": "Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips mod_apreq2-20101207/2.8.1 mod_perl/2.0.11 Perl/v5.16.3",
+      "content-type": "text/xml; charset=utf-8",
+      "ratelimit-remaining": "4",
+      "via": "kong/3.1.1.3-enterprise-edition",
+      "x-kong-proxy-latency": "1",
+      "x-ratelimit-limit-minute": "10",
+      "x-ratelimit-remaining-minute": "4",
+      "ratelimit-limit": "10",
+      "ratelimit-reset": "53",
+      "date": "Wed, 01 Mar 2023 15:21:07 GMT",
+      "x-xss-protection": "1; mode=block",
+      "connection": "close",
+      "x-content-type-options": "nosniff",
+      "x-kong-upstream-latency": "87",
+      "strict-transport-security": "max-age=31536000; includeSubDomains"
+    },
+    "size": 1561
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "consumer": {
+    "created_at": 1677684008,
+    "username": "rajatest8000@test.com",
+    "type": 0,
+    "id": "3d71c74d-330f-5484-90b5-0a8fa81f7c7d"
+  },
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684067536,
+  "latencies": {
+    "proxy": 87,
+    "request": 89,
+    "kong": 2
+  },
+  "request": {
+    "url": "http://kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com:80/",
+    "size": 4198,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "x-forwarded-proto": "https",
+      "x-forwarded-port": "443",
+      "x-forwarded-for": "202.91.134.74",
+      "content-type": "text/plain",
+      "host": "kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com",
+      "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_311)",
+      "authorization": "REDACTED",
+      "x-amzn-trace-id": "Root=1-63ff6d63-057200f54d9d291e17d968e6",
+      "content-length": "3831"
+    },
+    "method": "POST"
+  },
+  "client_ip": "10.52.73.43",
+  "tries": [
+    {
+      "ip": "99.83.130.248",
+      "balancer_latency": 0,
+      "port": 443,
+      "balancer_start": 1677684067537
+    }
+  ],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-response-time": "0.0087",
+      "content-length": "630",
+      "soapserver": "SOAP::Lite/Perl/1.20",
+      "content-security-policy": "default-src https:; connect-src https:; font-src https: data:; child-src https:; img-src https: data:; media-src https:;  object-src https:; script-src www.google-analytics.com 'unsafe-inline' 'unsafe-eval' https:; style-src 'unsafe-inline' https:;",
+      "server": "Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips mod_apreq2-20101207/2.8.1 mod_perl/2.0.11 Perl/v5.16.3",
+      "content-type": "text/xml; charset=utf-8",
+      "ratelimit-remaining": "2",
+      "via": "kong/3.1.1.3-enterprise-edition",
+      "x-kong-proxy-latency": "1",
+      "x-ratelimit-limit-minute": "10",
+      "x-ratelimit-remaining-minute": "2",
+      "ratelimit-limit": "10",
+      "ratelimit-reset": "53",
+      "date": "Wed, 01 Mar 2023 15:21:07 GMT",
+      "x-xss-protection": "1; mode=block",
+      "connection": "close",
+      "x-content-type-options": "nosniff",
+      "x-kong-upstream-latency": "84",
+      "strict-transport-security": "max-age=31536000; includeSubDomains"
+    },
+    "size": 1561
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "consumer": {
+    "created_at": 1677684008,
+    "username": "rajatest8000@test.com",
+    "type": 0,
+    "id": "3d71c74d-330f-5484-90b5-0a8fa81f7c7d"
+  },
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684067608,
+  "latencies": {
+    "proxy": 84,
+    "request": 86,
+    "kong": 2
+  },
+  "request": {
+    "url": "http://kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com:80/",
+    "size": 4198,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "x-forwarded-proto": "https",
+      "x-forwarded-port": "443",
+      "x-forwarded-for": "202.91.134.74",
+      "content-type": "text/plain",
+      "host": "kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com",
+      "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_311)",
+      "authorization": "REDACTED",
+      "x-amzn-trace-id": "Root=1-63ff6d63-5636b8723a1d69616c601036",
+      "content-length": "3831"
+    },
+    "method": "POST"
+  },
+  "client_ip": "10.52.73.25",
+  "tries": [
+    {
+      "ip": "99.83.130.248",
+      "balancer_latency": 1,
+      "port": 443,
+      "balancer_start": 1677684067608
+    }
+  ],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-response-time": "0.0088",
+      "content-length": "630",
+      "soapserver": "SOAP::Lite/Perl/1.20",
+      "content-security-policy": "default-src https:; connect-src https:; font-src https: data:; child-src https:; img-src https: data:; media-src https:;  object-src https:; script-src www.google-analytics.com 'unsafe-inline' 'unsafe-eval' https:; style-src 'unsafe-inline' https:;",
+      "server": "Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips mod_apreq2-20101207/2.8.1 mod_perl/2.0.11 Perl/v5.16.3",
+      "content-type": "text/xml; charset=utf-8",
+      "ratelimit-remaining": "1",
+      "via": "kong/3.1.1.3-enterprise-edition",
+      "x-kong-proxy-latency": "1",
+      "x-ratelimit-limit-minute": "10",
+      "x-ratelimit-remaining-minute": "1",
+      "ratelimit-limit": "10",
+      "ratelimit-reset": "53",
+      "date": "Wed, 01 Mar 2023 15:21:07 GMT",
+      "x-xss-protection": "1; mode=block",
+      "connection": "close",
+      "x-content-type-options": "nosniff",
+      "x-kong-upstream-latency": "81",
+      "strict-transport-security": "max-age=31536000; includeSubDomains"
+    },
+    "size": 1561
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "consumer": {
+    "created_at": 1677684008,
+    "username": "rajatest8000@test.com",
+    "type": 0,
+    "id": "3d71c74d-330f-5484-90b5-0a8fa81f7c7d"
+  },
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684067637,
+  "latencies": {
+    "proxy": 81,
+    "request": 82,
+    "kong": 1
+  },
+  "request": {
+    "url": "http://kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com:80/",
+    "size": 4198,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "x-forwarded-proto": "https",
+      "x-forwarded-port": "443",
+      "x-forwarded-for": "202.91.134.74",
+      "content-type": "text/plain",
+      "host": "kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com",
+      "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_311)",
+      "authorization": "REDACTED",
+      "x-amzn-trace-id": "Root=1-63ff6d63-0a5343f910b3449a643cc1a3",
+      "content-length": "3831"
+    },
+    "method": "POST"
+  },
+  "client_ip": "10.52.73.43",
+  "tries": [
+    {
+      "ip": "75.2.72.54",
+      "balancer_latency": 0,
+      "port": 443,
+      "balancer_start": 1677684067638
+    }
+  ],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-response-time": "0.0088",
+      "content-length": "630",
+      "soapserver": "SOAP::Lite/Perl/1.20",
+      "content-security-policy": "default-src https:; connect-src https:; font-src https: data:; child-src https:; img-src https: data:; media-src https:;  object-src https:; script-src www.google-analytics.com 'unsafe-inline' 'unsafe-eval' https:; style-src 'unsafe-inline' https:;",
+      "server": "Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips mod_apreq2-20101207/2.8.1 mod_perl/2.0.11 Perl/v5.16.3",
+      "content-type": "text/xml; charset=utf-8",
+      "ratelimit-remaining": "0",
+      "via": "kong/3.1.1.3-enterprise-edition",
+      "x-kong-proxy-latency": "1",
+      "x-ratelimit-limit-minute": "10",
+      "x-ratelimit-remaining-minute": "0",
+      "ratelimit-limit": "10",
+      "ratelimit-reset": "53",
+      "date": "Wed, 01 Mar 2023 15:21:07 GMT",
+      "x-xss-protection": "1; mode=block",
+      "connection": "close",
+      "x-content-type-options": "nosniff",
+      "x-kong-upstream-latency": "84",
+      "strict-transport-security": "max-age=31536000; includeSubDomains"
+    },
+    "size": 1561
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "consumer": {
+    "created_at": 1677684008,
+    "username": "rajatest8000@test.com",
+    "type": 0,
+    "id": "3d71c74d-330f-5484-90b5-0a8fa81f7c7d"
+  },
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684067640,
+  "latencies": {
+    "proxy": 84,
+    "request": 85,
+    "kong": 1
+  },
+  "request": {
+    "url": "http://kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com:80/",
+    "size": 4198,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "x-forwarded-proto": "https",
+      "x-forwarded-port": "443",
+      "x-forwarded-for": "202.91.134.74",
+      "content-type": "text/plain",
+      "host": "kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com",
+      "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_311)",
+      "authorization": "REDACTED",
+      "x-amzn-trace-id": "Root=1-63ff6d63-20c01f2b39ac1f020b3c0e23",
+      "content-length": "3831"
+    },
+    "method": "POST"
+  },
+  "client_ip": "10.52.73.43",
+  "tries": [
+    {
+      "ip": "99.83.130.248",
+      "balancer_latency": 0,
+      "port": 443,
+      "balancer_start": 1677684067641
+    }
+  ],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 500,
+    "headers": {
+      "content-type": "application/json; charset=utf-8",
+      "content-length": "42",
+      "connection": "close",
+      "x-kong-response-latency": "0",
+      "server": "kong/3.1.1.3-enterprise-edition"
+    },
+    "size": 272
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684069412,
+  "latencies": {
+    "proxy": -1,
+    "request": 0,
+    "kong": 0
+  },
+  "request": {
+    "url": "http://10.52.73.25:80/",
+    "size": 132,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "connection": "close",
+      "accept-encoding": "gzip, compressed",
+      "user-agent": "ELB-HealthChecker/2.0",
+      "host": "10.52.73.25:30010"
+    },
+    "method": "GET"
+  },
+  "client_ip": "10.52.73.25",
+  "tries": [],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 500,
+    "headers": {
+      "content-type": "application/json; charset=utf-8",
+      "content-length": "42",
+      "connection": "close",
+      "x-kong-response-latency": "1",
+      "server": "kong/3.1.1.3-enterprise-edition"
+    },
+    "size": 272
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684069412,
+  "latencies": {
+    "proxy": -1,
+    "request": 1,
+    "kong": 1
+  },
+  "request": {
+    "url": "http://10.52.73.43:80/",
+    "size": 132,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "connection": "close",
+      "accept-encoding": "gzip, compressed",
+      "user-agent": "ELB-HealthChecker/2.0",
+      "host": "10.52.73.43:30010"
+    },
+    "method": "GET"
+  },
+  "client_ip": "10.52.73.43",
+  "tries": [],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 429,
+    "headers": {
+      "content-length": "37",
+      "x-ratelimit-limit-minute": "10",
+      "x-ratelimit-remaining-minute": "0",
+      "ratelimit-limit": "10",
+      "ratelimit-reset": "57",
+      "content-type": "application/json; charset=utf-8",
+      "server": "kong/3.1.1.3-enterprise-edition",
+      "connection": "close",
+      "x-kong-response-latency": "1",
+      "retry-after": "57",
+      "ratelimit-remaining": "0"
+    },
+    "size": 414
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "consumer": {
+    "created_at": 1677684008,
+    "username": "rajatest8000@test.com",
+    "type": 0,
+    "id": "3d71c74d-330f-5484-90b5-0a8fa81f7c7d"
+  },
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684069976,
+  "latencies": {
+    "proxy": -1,
+    "request": 1,
+    "kong": 1
+  },
+  "request": {
+    "url": "http://kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com:80/",
+    "size": 4198,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "x-forwarded-proto": "https",
+      "x-forwarded-port": "443",
+      "x-forwarded-for": "202.91.134.74",
+      "content-type": "text/plain",
+      "host": "kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com",
+      "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_311)",
+      "authorization": "REDACTED",
+      "x-amzn-trace-id": "Root=1-63ff6d65-2d2c5b7f1e6850a26ff0cbc5",
+      "content-length": "3831"
+    },
+    "method": "POST"
+  },
+  "client_ip": "10.52.73.25",
+  "tries": [],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 429,
+    "headers": {
+      "content-length": "37",
+      "x-ratelimit-limit-minute": "10",
+      "x-ratelimit-remaining-minute": "0",
+      "ratelimit-limit": "10",
+      "ratelimit-reset": "62",
+      "content-type": "application/json; charset=utf-8",
+      "server": "kong/3.1.1.3-enterprise-edition",
+      "connection": "close",
+      "x-kong-response-latency": "0",
+      "retry-after": "62",
+      "ratelimit-remaining": "0"
+    },
+    "size": 414
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "consumer": {
+    "created_at": 1677684008,
+    "username": "rajatest8000@test.com",
+    "type": 0,
+    "id": "3d71c74d-330f-5484-90b5-0a8fa81f7c7d"
+  },
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684070014,
+  "latencies": {
+    "proxy": -1,
+    "request": 1,
+    "kong": 0
+  },
+  "request": {
+    "url": "http://kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com:80/",
+    "size": 4198,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "x-forwarded-proto": "https",
+      "x-forwarded-port": "443",
+      "x-forwarded-for": "202.91.134.74",
+      "content-type": "text/plain",
+      "host": "kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com",
+      "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_311)",
+      "authorization": "REDACTED",
+      "x-amzn-trace-id": "Root=1-63ff6d66-5ce77a445b846bc851244fa8",
+      "content-length": "3831"
+    },
+    "method": "POST"
+  },
+  "client_ip": "10.52.73.25",
+  "tries": [],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 429,
+    "headers": {
+      "content-length": "37",
+      "x-ratelimit-limit-minute": "10",
+      "x-ratelimit-remaining-minute": "0",
+      "ratelimit-limit": "10",
+      "ratelimit-reset": "68",
+      "content-type": "application/json; charset=utf-8",
+      "server": "kong/3.1.1.3-enterprise-edition",
+      "connection": "close",
+      "x-kong-response-latency": "0",
+      "retry-after": "68",
+      "ratelimit-remaining": "0"
+    },
+    "size": 414
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "consumer": {
+    "created_at": 1677684008,
+    "username": "rajatest8000@test.com",
+    "type": 0,
+    "id": "3d71c74d-330f-5484-90b5-0a8fa81f7c7d"
+  },
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684070015,
+  "latencies": {
+    "proxy": -1,
+    "request": 0,
+    "kong": 0
+  },
+  "request": {
+    "url": "http://kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com:80/",
+    "size": 4198,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "x-forwarded-proto": "https",
+      "x-forwarded-port": "443",
+      "x-forwarded-for": "202.91.134.74",
+      "content-type": "text/plain",
+      "host": "kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com",
+      "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_311)",
+      "authorization": "REDACTED",
+      "x-amzn-trace-id": "Root=1-63ff6d66-19f1e8972058154b07b9b5db",
+      "content-length": "3831"
+    },
+    "method": "POST"
+  },
+  "client_ip": "10.52.73.43",
+  "tries": [],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 429,
+    "headers": {
+      "content-length": "37",
+      "x-ratelimit-limit-minute": "10",
+      "x-ratelimit-remaining-minute": "0",
+      "ratelimit-limit": "10",
+      "ratelimit-reset": "74",
+      "content-type": "application/json; charset=utf-8",
+      "server": "kong/3.1.1.3-enterprise-edition",
+      "connection": "close",
+      "x-kong-response-latency": "1",
+      "retry-after": "74",
+      "ratelimit-remaining": "0"
+    },
+    "size": 414
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "consumer": {
+    "created_at": 1677684008,
+    "username": "rajatest8000@test.com",
+    "type": 0,
+    "id": "3d71c74d-330f-5484-90b5-0a8fa81f7c7d"
+  },
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684070032,
+  "latencies": {
+    "proxy": -1,
+    "request": 1,
+    "kong": 1
+  },
+  "request": {
+    "url": "http://kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com:80/",
+    "size": 4198,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "x-forwarded-proto": "https",
+      "x-forwarded-port": "443",
+      "x-forwarded-for": "202.91.134.74",
+      "content-type": "text/plain",
+      "host": "kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com",
+      "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_311)",
+      "authorization": "REDACTED",
+      "x-amzn-trace-id": "Root=1-63ff6d66-0a93aca90a445d4d620e4be9",
+      "content-length": "3831"
+    },
+    "method": "POST"
+  },
+  "client_ip": "10.52.73.25",
+  "tries": [],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 429,
+    "headers": {
+      "content-length": "37",
+      "x-ratelimit-limit-minute": "10",
+      "x-ratelimit-remaining-minute": "0",
+      "ratelimit-limit": "10",
+      "ratelimit-reset": "80",
+      "content-type": "application/json; charset=utf-8",
+      "server": "kong/3.1.1.3-enterprise-edition",
+      "connection": "close",
+      "x-kong-response-latency": "1",
+      "retry-after": "80",
+      "ratelimit-remaining": "0"
+    },
+    "size": 414
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "consumer": {
+    "created_at": 1677684008,
+    "username": "rajatest8000@test.com",
+    "type": 0,
+    "id": "3d71c74d-330f-5484-90b5-0a8fa81f7c7d"
+  },
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684070042,
+  "latencies": {
+    "proxy": -1,
+    "request": 1,
+    "kong": 1
+  },
+  "request": {
+    "url": "http://kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com:80/",
+    "size": 4198,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "x-forwarded-proto": "https",
+      "x-forwarded-port": "443",
+      "x-forwarded-for": "202.91.134.74",
+      "content-type": "text/plain",
+      "host": "kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com",
+      "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_311)",
+      "authorization": "REDACTED",
+      "x-amzn-trace-id": "Root=1-63ff6d66-44f2ed7e276f180723cec0e0",
+      "content-length": "3831"
+    },
+    "method": "POST"
+  },
+  "client_ip": "10.52.73.43",
+  "tries": [],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 429,
+    "headers": {
+      "content-length": "37",
+      "x-ratelimit-limit-minute": "10",
+      "x-ratelimit-remaining-minute": "0",
+      "ratelimit-limit": "10",
+      "ratelimit-reset": "84",
+      "content-type": "application/json; charset=utf-8",
+      "server": "kong/3.1.1.3-enterprise-edition",
+      "connection": "close",
+      "x-kong-response-latency": "1",
+      "retry-after": "84",
+      "ratelimit-remaining": "0"
+    },
+    "size": 414
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "consumer": {
+    "created_at": 1677684008,
+    "username": "rajatest8000@test.com",
+    "type": 0,
+    "id": "3d71c74d-330f-5484-90b5-0a8fa81f7c7d"
+  },
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684072343,
+  "latencies": {
+    "proxy": -1,
+    "request": 1,
+    "kong": 1
+  },
+  "request": {
+    "url": "http://kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com:80/",
+    "size": 4198,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "x-forwarded-proto": "https",
+      "x-forwarded-port": "443",
+      "x-forwarded-for": "202.91.134.74",
+      "content-type": "text/plain",
+      "host": "kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com",
+      "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_311)",
+      "authorization": "REDACTED",
+      "x-amzn-trace-id": "Root=1-63ff6d68-774e424029381dcd407f2a8b",
+      "content-length": "3831"
+    },
+    "method": "POST"
+  },
+  "client_ip": "10.52.73.43",
+  "tries": [],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 429,
+    "headers": {
+      "content-length": "37",
+      "x-ratelimit-limit-minute": "10",
+      "x-ratelimit-remaining-minute": "0",
+      "ratelimit-limit": "10",
+      "ratelimit-reset": "90",
+      "content-type": "application/json; charset=utf-8",
+      "server": "kong/3.1.1.3-enterprise-edition",
+      "connection": "close",
+      "x-kong-response-latency": "1",
+      "retry-after": "90",
+      "ratelimit-remaining": "0"
+    },
+    "size": 414
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "consumer": {
+    "created_at": 1677684008,
+    "username": "rajatest8000@test.com",
+    "type": 0,
+    "id": "3d71c74d-330f-5484-90b5-0a8fa81f7c7d"
+  },
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684072381,
+  "latencies": {
+    "proxy": -1,
+    "request": 1,
+    "kong": 1
+  },
+  "request": {
+    "url": "http://kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com:80/",
+    "size": 4198,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "x-forwarded-proto": "https",
+      "x-forwarded-port": "443",
+      "x-forwarded-for": "202.91.134.74",
+      "content-type": "text/plain",
+      "host": "kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com",
+      "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_311)",
+      "authorization": "REDACTED",
+      "x-amzn-trace-id": "Root=1-63ff6d68-1392840a17216a806460a2cf",
+      "content-length": "3831"
+    },
+    "method": "POST"
+  },
+  "client_ip": "10.52.73.25",
+  "tries": [],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 429,
+    "headers": {
+      "content-length": "37",
+      "x-ratelimit-limit-minute": "10",
+      "x-ratelimit-remaining-minute": "0",
+      "ratelimit-limit": "10",
+      "ratelimit-reset": "96",
+      "content-type": "application/json; charset=utf-8",
+      "server": "kong/3.1.1.3-enterprise-edition",
+      "connection": "close",
+      "x-kong-response-latency": "1",
+      "retry-after": "96",
+      "ratelimit-remaining": "0"
+    },
+    "size": 414
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "consumer": {
+    "created_at": 1677684008,
+    "username": "rajatest8000@test.com",
+    "type": 0,
+    "id": "3d71c74d-330f-5484-90b5-0a8fa81f7c7d"
+  },
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684072382,
+  "latencies": {
+    "proxy": -1,
+    "request": 1,
+    "kong": 1
+  },
+  "request": {
+    "url": "http://kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com:80/",
+    "size": 4198,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "x-forwarded-proto": "https",
+      "x-forwarded-port": "443",
+      "x-forwarded-for": "202.91.134.74",
+      "content-type": "text/plain",
+      "host": "kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com",
+      "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_311)",
+      "authorization": "REDACTED",
+      "x-amzn-trace-id": "Root=1-63ff6d68-45e437786ea320e426a52abd",
+      "content-length": "3831"
+    },
+    "method": "POST"
+  },
+  "client_ip": "10.52.73.25",
+  "tries": [],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 429,
+    "headers": {
+      "content-length": "37",
+      "x-ratelimit-limit-minute": "10",
+      "x-ratelimit-remaining-minute": "0",
+      "ratelimit-limit": "10",
+      "ratelimit-reset": "102",
+      "content-type": "application/json; charset=utf-8",
+      "server": "kong/3.1.1.3-enterprise-edition",
+      "connection": "close",
+      "x-kong-response-latency": "0",
+      "retry-after": "102",
+      "ratelimit-remaining": "0"
+    },
+    "size": 416
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "consumer": {
+    "created_at": 1677684008,
+    "username": "rajatest8000@test.com",
+    "type": 0,
+    "id": "3d71c74d-330f-5484-90b5-0a8fa81f7c7d"
+  },
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684072402,
+  "latencies": {
+    "proxy": -1,
+    "request": 0,
+    "kong": 0
+  },
+  "request": {
+    "url": "http://kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com:80/",
+    "size": 4198,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "x-forwarded-proto": "https",
+      "x-forwarded-port": "443",
+      "x-forwarded-for": "202.91.134.74",
+      "content-type": "text/plain",
+      "host": "kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com",
+      "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_311)",
+      "authorization": "REDACTED",
+      "x-amzn-trace-id": "Root=1-63ff6d68-18cb37d8680b38372c17a33f",
+      "content-length": "3831"
+    },
+    "method": "POST"
+  },
+  "client_ip": "10.52.73.43",
+  "tries": [],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 429,
+    "headers": {
+      "content-length": "37",
+      "x-ratelimit-limit-minute": "10",
+      "x-ratelimit-remaining-minute": "0",
+      "ratelimit-limit": "10",
+      "ratelimit-reset": "108",
+      "content-type": "application/json; charset=utf-8",
+      "server": "kong/3.1.1.3-enterprise-edition",
+      "connection": "close",
+      "x-kong-response-latency": "0",
+      "retry-after": "108",
+      "ratelimit-remaining": "0"
+    },
+    "size": 416
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "consumer": {
+    "created_at": 1677684008,
+    "username": "rajatest8000@test.com",
+    "type": 0,
+    "id": "3d71c74d-330f-5484-90b5-0a8fa81f7c7d"
+  },
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684072412,
+  "latencies": {
+    "proxy": -1,
+    "request": 0,
+    "kong": 0
+  },
+  "request": {
+    "url": "http://kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com:80/",
+    "size": 4198,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "x-forwarded-proto": "https",
+      "x-forwarded-port": "443",
+      "x-forwarded-for": "202.91.134.74",
+      "content-type": "text/plain",
+      "host": "kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com",
+      "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_311)",
+      "authorization": "REDACTED",
+      "x-amzn-trace-id": "Root=1-63ff6d68-6e54589740d171bd6cab36d9",
+      "content-length": "3831"
+    },
+    "method": "POST"
+  },
+  "client_ip": "10.52.73.43",
+  "tries": [],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 429,
+    "headers": {
+      "content-length": "37",
+      "x-ratelimit-limit-minute": "10",
+      "x-ratelimit-remaining-minute": "0",
+      "ratelimit-limit": "10",
+      "ratelimit-reset": "112",
+      "content-type": "application/json; charset=utf-8",
+      "server": "kong/3.1.1.3-enterprise-edition",
+      "connection": "close",
+      "x-kong-response-latency": "0",
+      "retry-after": "112",
+      "ratelimit-remaining": "0"
+    },
+    "size": 416
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "consumer": {
+    "created_at": 1677684008,
+    "username": "rajatest8000@test.com",
+    "type": 0,
+    "id": "3d71c74d-330f-5484-90b5-0a8fa81f7c7d"
+  },
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684074768,
+  "latencies": {
+    "proxy": -1,
+    "request": 0,
+    "kong": 0
+  },
+  "request": {
+    "url": "http://kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com:80/",
+    "size": 4198,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "x-forwarded-proto": "https",
+      "x-forwarded-port": "443",
+      "x-forwarded-for": "202.91.134.74",
+      "content-type": "text/plain",
+      "host": "kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com",
+      "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_311)",
+      "authorization": "REDACTED",
+      "x-amzn-trace-id": "Root=1-63ff6d6a-3ebe155354efde1b6237bb64",
+      "content-length": "3831"
+    },
+    "method": "POST"
+  },
+  "client_ip": "10.52.73.25",
+  "tries": [],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 429,
+    "headers": {
+      "content-length": "37",
+      "x-ratelimit-limit-minute": "10",
+      "x-ratelimit-remaining-minute": "0",
+      "ratelimit-limit": "10",
+      "ratelimit-reset": "118",
+      "content-type": "application/json; charset=utf-8",
+      "server": "kong/3.1.1.3-enterprise-edition",
+      "connection": "close",
+      "x-kong-response-latency": "1",
+      "retry-after": "118",
+      "ratelimit-remaining": "0"
+    },
+    "size": 416
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "consumer": {
+    "created_at": 1677684008,
+    "username": "rajatest8000@test.com",
+    "type": 0,
+    "id": "3d71c74d-330f-5484-90b5-0a8fa81f7c7d"
+  },
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684074777,
+  "latencies": {
+    "proxy": -1,
+    "request": 1,
+    "kong": 1
+  },
+  "request": {
+    "url": "http://kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com:80/",
+    "size": 4198,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "x-forwarded-proto": "https",
+      "x-forwarded-port": "443",
+      "x-forwarded-for": "202.91.134.74",
+      "content-type": "text/plain",
+      "host": "kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com",
+      "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_311)",
+      "authorization": "REDACTED",
+      "x-amzn-trace-id": "Root=1-63ff6d6a-147882c26c07060f1e3109ae",
+      "content-length": "3831"
+    },
+    "method": "POST"
+  },
+  "client_ip": "10.52.73.25",
+  "tries": [],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 429,
+    "headers": {
+      "content-length": "37",
+      "x-ratelimit-limit-minute": "10",
+      "x-ratelimit-remaining-minute": "0",
+      "ratelimit-limit": "10",
+      "ratelimit-reset": "124",
+      "content-type": "application/json; charset=utf-8",
+      "server": "kong/3.1.1.3-enterprise-edition",
+      "connection": "close",
+      "x-kong-response-latency": "1",
+      "retry-after": "124",
+      "ratelimit-remaining": "0"
+    },
+    "size": 416
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "consumer": {
+    "created_at": 1677684008,
+    "username": "rajatest8000@test.com",
+    "type": 0,
+    "id": "3d71c74d-330f-5484-90b5-0a8fa81f7c7d"
+  },
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684074831,
+  "latencies": {
+    "proxy": -1,
+    "request": 1,
+    "kong": 1
+  },
+  "request": {
+    "url": "http://kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com:80/",
+    "size": 4198,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "x-forwarded-proto": "https",
+      "x-forwarded-port": "443",
+      "x-forwarded-for": "202.91.134.74",
+      "content-type": "text/plain",
+      "host": "kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com",
+      "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_311)",
+      "authorization": "REDACTED",
+      "x-amzn-trace-id": "Root=1-63ff6d6a-2ce2dd442081e23c16825001",
+      "content-length": "3831"
+    },
+    "method": "POST"
+  },
+  "client_ip": "10.52.73.43",
+  "tries": [],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 429,
+    "headers": {
+      "content-length": "37",
+      "x-ratelimit-limit-minute": "10",
+      "x-ratelimit-remaining-minute": "0",
+      "ratelimit-limit": "10",
+      "ratelimit-reset": "130",
+      "content-type": "application/json; charset=utf-8",
+      "server": "kong/3.1.1.3-enterprise-edition",
+      "connection": "close",
+      "x-kong-response-latency": "0",
+      "retry-after": "130",
+      "ratelimit-remaining": "0"
+    },
+    "size": 416
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "consumer": {
+    "created_at": 1677684008,
+    "username": "rajatest8000@test.com",
+    "type": 0,
+    "id": "3d71c74d-330f-5484-90b5-0a8fa81f7c7d"
+  },
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684074860,
+  "latencies": {
+    "proxy": -1,
+    "request": 0,
+    "kong": 0
+  },
+  "request": {
+    "url": "http://kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com:80/",
+    "size": 4198,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "x-forwarded-proto": "https",
+      "x-forwarded-port": "443",
+      "x-forwarded-for": "202.91.134.74",
+      "content-type": "text/plain",
+      "host": "kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com",
+      "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_311)",
+      "authorization": "REDACTED",
+      "x-amzn-trace-id": "Root=1-63ff6d6a-278e3f966312f85c4ab908aa",
+      "content-length": "3831"
+    },
+    "method": "POST"
+  },
+  "client_ip": "10.52.73.43",
+  "tries": [],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 429,
+    "headers": {
+      "content-length": "37",
+      "x-ratelimit-limit-minute": "10",
+      "x-ratelimit-remaining-minute": "0",
+      "ratelimit-limit": "10",
+      "ratelimit-reset": "136",
+      "content-type": "application/json; charset=utf-8",
+      "server": "kong/3.1.1.3-enterprise-edition",
+      "connection": "close",
+      "x-kong-response-latency": "0",
+      "retry-after": "136",
+      "ratelimit-remaining": "0"
+    },
+    "size": 416
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "consumer": {
+    "created_at": 1677684008,
+    "username": "rajatest8000@test.com",
+    "type": 0,
+    "id": "3d71c74d-330f-5484-90b5-0a8fa81f7c7d"
+  },
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684074861,
+  "latencies": {
+    "proxy": -1,
+    "request": 0,
+    "kong": 0
+  },
+  "request": {
+    "url": "http://kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com:80/",
+    "size": 4198,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "x-forwarded-proto": "https",
+      "x-forwarded-port": "443",
+      "x-forwarded-for": "202.91.134.74",
+      "content-type": "text/plain",
+      "host": "kong-ent-poc-alb1-833305973.us-east-1.elb.amazonaws.com",
+      "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_311)",
+      "authorization": "REDACTED",
+      "x-amzn-trace-id": "Root=1-63ff6d6a-3e43e33065043f8d003b4ca7",
+      "content-length": "3831"
+    },
+    "method": "POST"
+  },
+  "client_ip": "10.52.73.25",
+  "tries": [],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 500,
+    "headers": {
+      "content-type": "application/json; charset=utf-8",
+      "content-length": "42",
+      "connection": "close",
+      "x-kong-response-latency": "0",
+      "server": "kong/3.1.1.3-enterprise-edition"
+    },
+    "size": 272
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684083312,
+  "latencies": {
+    "proxy": -1,
+    "request": 0,
+    "kong": 0
+  },
+  "request": {
+    "url": "http://10.52.73.43:80/",
+    "size": 132,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "connection": "close",
+      "accept-encoding": "gzip, compressed",
+      "user-agent": "ELB-HealthChecker/2.0",
+      "host": "10.52.73.43:30010"
+    },
+    "method": "GET"
+  },
+  "client_ip": "10.52.73.43",
+  "tries": [],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}
+{
+  "response": {
+    "status": 500,
+    "headers": {
+      "content-type": "application/json; charset=utf-8",
+      "content-length": "42",
+      "connection": "close",
+      "x-kong-response-latency": "0",
+      "server": "kong/3.1.1.3-enterprise-edition"
+    },
+    "size": 272
+  },
+  "workspace": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+  "route": {
+    "preserve_host": false,
+    "service": {
+      "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c"
+    },
+    "paths": [
+      "/"
+    ],
+    "path_handling": "v0",
+    "id": "04d1e039-7156-5845-a016-86811ecd5eed",
+    "regex_priority": 0,
+    "name": "performance-soap-route",
+    "created_at": 1677684008,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "strip_path": true,
+    "response_buffering": true,
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "request_buffering": true,
+    "https_redirect_status_code": 426
+  },
+  "started_at": 1677684083312,
+  "latencies": {
+    "proxy": -1,
+    "request": 0,
+    "kong": 0
+  },
+  "request": {
+    "url": "http://10.52.73.25:80/",
+    "size": 132,
+    "querystring": {},
+    "uri": "/",
+    "headers": {
+      "connection": "close",
+      "accept-encoding": "gzip, compressed",
+      "user-agent": "ELB-HealthChecker/2.0",
+      "host": "10.52.73.25:30010"
+    },
+    "method": "GET"
+  },
+  "client_ip": "10.52.73.25",
+  "tries": [],
+  "service": {
+    "enabled": true,
+    "connect_timeout": 60000,
+    "read_timeout": 60000,
+    "id": "c13771df-e6a6-54d9-ba82-87435cf8b95c",
+    "tags": [
+      "performance-soap"
+    ],
+    "name": "performance-soap-service",
+    "created_at": 1677684008,
+    "retries": 5,
+    "updated_at": 1677684008,
+    "ws_id": "0dc6f45b-8f8d-40d2-a504-473544ee190b",
+    "port": 443,
+    "protocol": "https",
+    "host": "soap.performance.aws.vindicia.com",
+    "write_timeout": 60000
+  },
+  "upstream_uri": "/"
+}

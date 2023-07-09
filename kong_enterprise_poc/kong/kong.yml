@@ -1,0 +1,141 @@
+_format_version: "3.0"
+
+_transform: true
+
+_comment: This is a top level comment, and must be a string
+_ignore:
+- This array entry will be ignored
+- as well as this one
+plugins:
+  - name: file-log
+    config: 
+      path: /tmp/file.log
+  - name: prometheus
+    config:
+      latency_metrics: true
+      bandwidth_metrics: true
+      upstream_health_metrics: true
+      status_code_metrics: true
+      per_consumer: true
+services:
+- name: performance-soap-service
+  url: #<soap-performance-url>
+  tags:
+  - performance-soap
+  plugins:
+  - name: pre-function
+    config:
+      access:
+      - |
+        local xmlua = require("xmlua")
+        local split = require("pl.stringx").split
+        local action = kong.request.get_header("SOAPAction")
+        local map = {["Account"] = "class-a", ["Transaction"] = "class-a",
+                    ["AutoBill"] = "class-b", ["Entitlement"] = "class-b",
+                    ["PaymentMethod"] = "class-b"}
+        local document = xmlua.XML.parse(kong.request.get_raw_body())
+        local envelope = document:root()
+        local ns = envelope["xmlns:ns1"]
+        local a = split(ns, "/")
+        local type = a[#a]
+        kong.log.notice("type: "..type)
+        local class = map[type]
+        local user = document:search("/SOAP-ENV:Envelope/SOAP-ENV:Body/ns1:"..action.."/auth/login")
+        local username = user:text().."_"..class
+        local consumer = kong.client.load_consumer(username, true)
+        if consumer then
+          kong.client.authenticate(consumer, nil)
+        else
+          kong.log.notice("no consumer "..username)
+        end
+  routes:
+  - name: performance-soap-route
+    paths:
+    - /      
+      
+- name: performance-rest-service
+  url: #<rest-performace-url>
+  tags:
+    - performance-rest
+  plugins:
+  - name: pre-function
+    config:
+      access:
+      - |
+        local split = require("pl.stringx").split
+        local ngx = ngx
+        local map = {["billing_plans"] = "class-a", ["products"] = "class-a",
+                    ["campaigns"] = "class-b", ["subscriptions"] = "class-b",
+                    ["transaction"] = "class-b", ["accounts"] = "class-b", ["payment_methods"] = "class-b"}
+        local auth_header = kong.request.get_header("authorization")      
+        local path = kong.request.get_path()
+        kong.log.notice("path: "..path)
+        local a = split(path, "/")
+        local type = a[3]
+        kong.log.notice("type: "..type)
+        local class = map[type]
+        -- assuming Basic
+        local encoded = auth_header:sub(7)
+        local decoded = ngx.decode_base64(encoded)
+        kong.log.notice("decoded: "..decoded)
+        local idx = decoded:find(":")
+        kong.log.notice("idx: "..tostring(idx))
+        local user = decoded:sub(1, idx-1).."_"..class
+        kong.log.notice("user: "..user)
+        local consumer = kong.client.load_consumer(user, true)
+        if consumer then
+          kong.client.authenticate(consumer, nil)
+        else
+          kong.log.notice("no consumer "..user)       
+        end
+  routes:
+  - name: performance-rest-route
+    paths:
+      - /rest
+    strip_path: true
+- name: prometheus
+  url: https://127.0.0.1:8444/metrics
+  tags:
+  - prometheus
+  routes:
+  - name: prometheus-route
+    paths:
+    - /metrics
+- name: kong-redis
+  url: http://redis.redis.svc.cluster.local:6379
+  routes: []         
+consumers:
+- username: dtvnflws_soap_class-a
+  plugins:
+  - name: rate-limiting-advanced
+    config:
+      disable_penalty: true
+      limit:
+      - 10
+      window_size:
+      - 60
+      sync_rate: .25
+      namespace: myns
+      strategy: redis
+      redis:
+        host: redis.redis.svc.cluster.local
+        port: 6379
+        ssl: false
+        username: "kong"
+- username: dtvnflws_soap_class-b
+  plugins:
+  - name: rate-limiting-advanced
+    config:
+      disable_penalty: true
+      limit:
+      - 5
+      window_size:
+      - 60
+      namespace: myns
+      sync_rate: .25
+      strategy: redis
+      redis:
+        host: redis.redis.svc.cluster.local
+        port: 6379
+        ssl: false
+        username: "kong" 

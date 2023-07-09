@@ -1,0 +1,89 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tran="http://soap.vindicia.com/v22_0/Transaction">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <tran:auth>
+            <auth>
+                <version>22.0</version>
+                <login>exper_soap</login>
+                <password>m1jZrkTsw21C8jg6R3Wq2Mz8Pf5MRe3c</password>
+            </auth>
+            <transaction>
+                <!--Optional:-->
+                <amount>14.99</amount>
+                <!--Optional:-->
+                <currency>GBP</currency>
+                <!--Optional:-->
+                <account>
+                    <merchantAccountId>CustomerID90002</merchantAccountId>
+                    <!--Optional:-->
+                    <defaultCurrency>GBP</defaultCurrency>
+                    <!--Optional:-->
+                    <emailAddress>rajatest8000@test.com</emailAddress>
+                    <!--Optional:-->
+                    <name>Mike Daley</name>
+                    <!--Optional:-->
+                    <shippingAddress>
+                        <!--Optional:-->
+                        <name>Mike Daley</name>
+                        <!--Optional:-->
+                        <addr1>10 High Street</addr1>
+                        <!--Optional:-->
+                        <city>Brackley</city>
+                        <!--Optional:-->
+                        <county>Northants</county>
+                        <!--Optional:-->
+                        <postalCode>NN13 6EE</postalCode>
+                        <!--Optional:-->
+                        <country>UK</country>
+                    </shippingAddress>
+                </account>
+                <!--Optional:-->
+                <sourcePaymentMethod>
+                    <!--Optional:-->
+                    <type>CreditCard</type>
+                    <!--Optional:-->
+                    <creditCard>
+                        <!--Optional:-->
+                        <account>4111111111111111</account>
+                        <expirationDate>202211</expirationDate>
+                    </creditCard>
+                    <!--Optional:-->
+                    <nameValues>
+                        <name>CVN</name>
+                        <value>111</value>
+                    </nameValues>
+                    <!--Optional:-->
+                    <accountHolderName>Raja Test</accountHolderName>
+                    <!--Optional:-->
+                    <billingAddress>
+                        <!--Optional:-->
+                        <name>Mike Daley</name>
+                        <!--Optional:-->
+                        <addr1>10 High Street</addr1>
+                        <!--Optional:-->
+                        <city>Brackley</city>
+                        <!--Optional:-->
+                        <county>Northants</county>
+                        <!--Optional:-->
+                        <postalCode>NN13 6EE</postalCode>
+                        <!--Optional:-->
+                        <country>UK</country>
+                    </billingAddress>
+                    <currency>GBP</currency>
+                    <active>1</active>
+                </sourcePaymentMethod>
+                <transactionItems>
+                    <itemType>Purchase</itemType>
+                    <name>Auth Transaction</name>
+                    <!--Optional:-->
+                    <merchantAutoBillItemId></merchantAutoBillItemId>
+                    <price>0.00</price>
+                    <quantity>1</quantity>
+                </transactionItems>
+            </transaction>
+            <minChargebackProbability>100</minChargebackProbability>
+            <!--Optional:-->
+            <dryrun>0</dryrun>
+        </tran:auth>
+    </soapenv:Body>
+</soapenv:Envelope>
